@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\HeroSection;
+use App\Models\ManagePages;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+class HeroController extends Controller
+{
+    public function index()
+    {
+        // Fetch all hero sections from the database
+        $result['data'] = HeroSection::with('page')->get();
+        return view('admin.hero-section', $result);
+    }
+    public function upsert($id = null)
+    {
+        $result['pages'] = ManagePages::all();
+        $result['data'] = $id ? HeroSection::findOrFail($id) : null;
+        return view('admin.manage-hero-section', $result);
+    }
+    public function upsertProcess(Request $request, $id = null)
+    {
+        try {
+            // dd($request->all());
+            $validator = Validator::make($request->all(), [
+                'page_id' => 'required|numeric|exists:manage_pages,id',
+                'title' => 'required|string|max:255',
+                'subtitle' => 'nullable|string|max:255',
+                'listing_point' => 'nullable|string|max:255',
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+            // Process the page management logic here
+            if ($id) {
+                // Update the HeroSection
+                $hero = HeroSection::find($id);
+                $msg = 'Hero Section updated successfully!';
+            } else {
+                // Create a new HeroSection
+                $hero = new HeroSection();
+                $msg = 'Hero Section created successfully!';
+            }
+
+            $hero->page_id = $request->input('page_id');
+            $hero->title = $request->input('title');
+            $hero->subtitle = $request->input('subtitle');
+            $hero->listing_point = $request->input('listing_point');
+            $hero->status = 'active';
+            $hero->save();
+
+            return redirect()->route('admin.hero-section')->with('success', $msg);
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while processing your request.');
+        }
+    }
+    public function delHeroSection($id)
+    {
+        try {
+            $hero = HeroSection::findOrFail($id);
+            $hero->delete();
+            return redirect()->route('admin.hero-section')->with('success', 'Hero Section deleted successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while deleting the Hero Section.');
+        }
+    }
+}
