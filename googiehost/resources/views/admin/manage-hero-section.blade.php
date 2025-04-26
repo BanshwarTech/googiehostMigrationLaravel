@@ -49,21 +49,24 @@
 
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="title" class="form-label">Hero Title</label>
-                                <textarea class="tinymce-editor" id="title" name="title"> {{ old('title', $data->title ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="title" name="title"> {{ old('title', $data->title ?? '<h1 class="entry-title"></h1>') }}</textarea>
                                 @error('title')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="subtitle" class="form-label">Hero Subtitle</label>
-                                <textarea class="tinymce-editor" id="subtitle" name="subtitle">{{ old('subtitle', $data->subtitle ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="subtitle" name="subtitle">{{ old('subtitle', $data->subtitle ?? '<p style="font-size:20px;"></p>') }}</textarea>
                                 @error('subtitle')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="listing_point" class="form-label">Listing Point</label>
-                                <textarea class="tinymce-editor" id="listing_point" name="listing_point">{{ old('hero_title', $data->listing_point ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="listing_point" name="listing_point">{{ old(
+                                    'hero_title',
+                                    $data->listing_point ?? '<ul id="hero_list_check" class="list light-list list-check"><li></li> </ul>',
+                                ) }}</textarea>
                                 @error('listing_point')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
@@ -71,6 +74,10 @@
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="image" class="form-label">Hero Image</label>
                                 <input type="file" class="form-control" id="image" name="image">
+                                @if (!empty($data->image))
+                                    <img src="{{ asset('storage/uploads/hero/' . $data->image) }}" alt=""
+                                        class="img-fluid" width="75">
+                                @endif
                                 @error('image')
                                     <div class="message">{{ $message }}</div>
                                 @enderror

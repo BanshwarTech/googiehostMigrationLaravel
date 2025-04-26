@@ -8,7 +8,7 @@
                 {!! $serviceSections->title !!}
             </div>
             <div class="card-body">
-                <p class="card-text ">{!! $serviceSections->description !!}</p>
+                {!! $serviceSections->description !!}
                 <a href="{{ $serviceSections->button_link }}" class="mt-3"
                     style="color: #2b0074;font-weight:bold;font-size:16px;"
                     rel="me">{{ strtoupper($serviceSections->button_text) }} <i

@@ -57,20 +57,23 @@
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="listing_point" class="form-label">Listing Point</label>
-                                <textarea class="tinymce-editor" id="listing_point" name="listing_point">{{ old('listing_point', $data->listing_points ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="listing_point" name="listing_point">{{ old(
+                                    'listing_point',
+                                    $data->listing_points ?? '<ul class="deal-list text-left"><li class="discount-sec"></li></ul>',
+                                ) }}</textarea>
                                 @error('listing_point')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="deal_points" class="form-label">Deal Points</label>
-                                <textarea class="tinymce-editor" id="deal_points" name="deal_points">{{ old('deal_points', $data->deal_points ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="deal_points" name="deal_points">{{ old('deal_points', $data->deal_points ?? '<ul class="deal-list text-left"><li class="discount-sec"></li></ul>') }}</textarea>
                                 @error('deal_points')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <div class="mb-3 col-12 col-lg-12 col-md-12">
+                            <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="plan_image" class="form-label">Plan Image</label>
                                 <input type="file" class="form-control" id="plan_image" name="plan_image">
                                 @if (!empty($data->plan_image))
@@ -79,6 +82,15 @@
                                 @endif
 
                                 @error('plan_image')
+                                    <div class="message">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3 col-12 col-lg-6 col-md-6">
+                                <label for="disc_coupon" class="form-label">Discount Coupon</label>
+                                <input type="text" name="disc_coupon" id="disc_coupon" class="form-control"
+                                    value="{{ old('disc_coupon', $data->disc_coupon ?? '') }}">
+                                @error('disc_coupon')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>

@@ -12,9 +12,9 @@
     <link href="{{ asset('images/favicon.png') }}" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/97ebc2bc67.js" crossorigin="anonymous"></script>
+
+    {{-- <script src="https://kit.fontawesome.com/97ebc2bc67.js" crossorigin="anonymous"></script> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,6 +22,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <title>@yield('page_title')</title>
     <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet" />
 
@@ -49,11 +50,16 @@
             /* optional to control size */
         }
 
-        .feature-card h5 {
+
+
+        .md-icon-star::before {
+            content: '\e81b';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 800;
+            color: orange;
+            font-style: normal;
             font-size: 20px;
-            font-weight: 600;
-            color: #2b0074;
-            margin-bottom: 10px;
+            margin: 0 2px;
         }
     </style>
 </head>

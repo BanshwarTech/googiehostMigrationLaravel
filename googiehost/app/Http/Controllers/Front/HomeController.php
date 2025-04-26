@@ -52,6 +52,9 @@ class HomeController extends Controller
             },
             'faqSection' => function ($query) {
                 $query->where('status', 'active');
+            },
+            'paidHosting' => function ($query) {
+                $query->where('status', 'active');
             }
         ])->findOrFail(3);
 

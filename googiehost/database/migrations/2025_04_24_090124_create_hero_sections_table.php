@@ -16,7 +16,7 @@ return new class extends Migration
             // Define the foreign key column first
             $table->unsignedBigInteger('page_id');
             $table->string('title');
-            $table->string('subtitle')->nullable();
+            $table->text('subtitle')->nullable();
             $table->string('listing_point')->nullable();
             $table->string('image')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');

@@ -57,14 +57,14 @@
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="title" class="form-label">Service Title</label>
-                                <textarea class="tinymce-editor" id="title" name="title">{{ old('title', $data->title ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="title" name="title">{{ old('title', $data->title ?? '<h5 class="card-title"></h5>') }}</textarea>
                                 @error('title')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="tinymce-editor" id="description" name="description">{{ old('description', $data->description ?? '') }}</textarea>
+                                <textarea class="tinymce-editor" id="description" name="description">{{ old('description', $data->description ?? '<p class="card-text "></p>') }}</textarea>
                                 @error('description')
                                     <div class="message">{{ $message }}</div>
                                 @enderror

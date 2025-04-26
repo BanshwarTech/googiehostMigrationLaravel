@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('deal_points')->nullable();
             $table->string('button_text')->nullable();
             $table->string('button_link')->nullable();
+            $table->string('disc_coupon')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
 
             // Then apply the foreign key constraint

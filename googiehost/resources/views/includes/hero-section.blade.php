@@ -10,8 +10,7 @@
 
 
                     @if ($heroSection->subtitle != null)
-                        <p style="font-size:
-                            20px;">{!! $heroSection->subtitle !!}</p>
+                        {!! $heroSection->subtitle !!}
                     @endif
                     @if ($heroSection->listing_point != null)
                         {!! $heroSection->listing_point !!}

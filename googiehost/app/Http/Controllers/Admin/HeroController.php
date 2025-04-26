@@ -29,9 +29,9 @@ class HeroController extends Controller
             // dd($request->all());
             $validator = Validator::make($request->all(), [
                 'page_id' => 'required|numeric|exists:manage_pages,id',
-                'title' => 'required|string|max:255',
-                'subtitle' => 'nullable|string|max:255',
-                'listing_point' => 'nullable|string|max:255',
+                'title' => 'required|string',
+                'subtitle' => 'nullable|string',
+                'listing_point' => 'nullable|string',
                 'image' => 'nullable|mimes:jpeg,png,jpg,gif,svg',
             ]);
 

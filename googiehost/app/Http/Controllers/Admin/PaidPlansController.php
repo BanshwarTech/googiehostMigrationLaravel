@@ -30,6 +30,7 @@ class PaidPlansController extends Controller
                 'page_id' => 'required|numeric|exists:manage_pages,id',
                 'plan_image' => 'nullable|mimes:jpeg,png,jpg,gif,svg',
                 'rating' => 'nullable|string',
+                'disc_coupon' => 'nullable|string',
                 'listing_point' => 'nullable|string',
                 'deal_points' => 'nullable|string',
                 'button_text' => 'nullable|string|max:255',
@@ -42,26 +43,27 @@ class PaidPlansController extends Controller
             // Process the page management logic here
             if ($id) {
                 // Update the HeroSection
-                $service = PaidHosting::find($id);
+                $plan = PaidHosting::find($id);
                 $msg = 'Paid Hosting Plans updated successfully!';
             } else {
                 // Create a new HeroSection
-                $service = new PaidHosting();
+                $plan = new PaidHosting();
                 $msg = 'Paid Hosting Plans created successfully!';
             }
-            $service->page_id = $request->input('page_id');
-            $service->rating = $request->input('rating');
-            $service->listing_points = $request->input('listing_point');
-            $service->deal_points = $request->input('deal_points');
-            $service->button_text = $request->input('button_text');
-            $service->button_link = $request->input('button_link');
-            $service->status = 'active';
+            $plan->page_id = $request->input('page_id');
+            $plan->rating = $request->input('rating');
+            $plan->listing_points = $request->input('listing_point');
+            $plan->deal_points = $request->input('deal_points');
+            $plan->button_text = $request->input('button_text');
+            $plan->button_link = $request->input('button_link');
+            $plan->disc_coupon = $request->input('disc_coupon');
+            $plan->status = 'active';
 
             // Handle profile image upload
             if ($request->hasFile('plan_image')) {
                 // Delete old plan_image if it exists
-                if ($service->plan_image && Storage::exists('public/paidplans/paidHosting' . $service->plan_image)) {
-                    Storage::delete('public/paidplans/paidHosting/' . $service->plan_image);
+                if ($plan->plan_image && Storage::exists('public/paidplans/paidHosting' . $plan->plan_image)) {
+                    Storage::delete('public/paidplans/paidHosting/' . $plan->plan_image);
                 }
 
                 // Upload new plan_image
@@ -70,10 +72,10 @@ class PaidPlansController extends Controller
                 Storage::disk('public')->putFileAs('paidplans/paidHosting/', $plan_image, $plan_image_name);
 
                 // Save new file name
-                $service->plan_image = $plan_image_name;
+                $plan->plan_image = $plan_image_name;
             }
 
-            $service->save();
+            $plan->save();
 
             return redirect()->route('admin.paid-hosting-plans')->with('success', $msg);
         } catch (\Exception $e) {

@@ -17,6 +17,7 @@ class PaidHosting extends Model
         'deal_points',
         'button_text',
         'button_link',
+        'disc_coupon',
         'status'
     ];
     public function pagePaid()

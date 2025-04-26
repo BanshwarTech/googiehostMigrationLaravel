@@ -1000,751 +1000,68 @@
     <!-- Hero End -->
     <!-- Website Content etc -->
     <div class="container">
-        <div class="white-bg">
-            <div class="text-center mt-single mb-single block-double coupon-table-sec" style="padding: 8px 50px;">
-                <h3 class="large-title mb-double">Best Web Hosting Sale 2025
-                    <!--Best Web Hosting Sale 2024-->
-                </h3>
-
-                <p class="fs-5  text-dark text-center">Googiehost blog is your one-stop solution to finding the best web
-                    hosting
-                    services. Find out which
-                    top
-                    webhost are the best at saving your money &amp; time. Get reliable facts and reviews for the top
-                    rated
-                    hosting solutions.</p><br>
-                <p class="fs-5 text-dark text-center">Site Owner? You Deserve Peace of Mind! Compare Trusted & Checked Web
-                    Hosting Services Here. We've
-                    Compared 15 Flexible, Cost-Effective Web Hosting Services Your Dream Project Website.</p>
-
-                <!--new table s-->
-                <div class="couponcontainer" id="explore-plan">
-
-                    <table class="deals-table">
-
-
-                        <tbody>
-                            <tr onclick="location.href='https://googiehost.com/blog/go/youstable-main/';" class="">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/youstable-main/" target="_blank">
-                                        <img data-lazyloaded="1"
-                                            src="https://www.youstable.com/assets/img/logo_youstable.svg"
-                                            data-src="img/youstable.png" alt="logo_youstable" class="litespeed-loaded"
-                                            data-was-processed="true" width="300px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-                                </td>
-
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">AMD CPU Server
-                                        </li>
-                                        <li class="discount-sec">NVMe SSD Drive
-                                        </li>
-                                        <li class="discount-sec">24*7 Expert Support
-                                        </li>
-                                        <li class="discount-sec">Weekly Backup
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">$0.6/month</li>
-                                        <li class="discount-sec">1 Months FREE on the Annual VPS Plan
-                                        </li>
-
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/youstable-main/" target="_blank"
-                                            rel="noopener">Grab Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a><br>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/ultahost/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-
-                                    <a href="https://googiehost.com/blog/go/ultahost/" target="_blank">
-                                        <img data-lazyloaded="1" src="img/ultahost.png" data-src="img/ultahost.png"
-                                            class="litespeed-loaded" data-was-processed="true" width="180px"></a>
-                                    <br>
-                                    <span style="color:orange"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">Coupon: GOOGIEHOST</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Free Website Migration
-                                        </li>
-                                        <li class="discount-sec"> Free SSL, Domain, and Migration
-                                        </li>
-                                        <li class="discount-sec"> Fast NVMe SSD Hosting
-                                        </li>
-                                        <li class="discount-sec">24*7 Support
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">$2.99/month
-                                        </li>
-                                        <li class="discount-sec">Save Additional 7% With Promo GOOGIEHost on all hosting
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/ultahost/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-
-                                </td>
-                            </tr>
-
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/hostingermain/';" class="">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/hostingermain/" target="_blank">
-                                        <img style="margin-top:10px; margin-bottom:15px;" data-lazyloaded="1"
-                                            src="img/hostinger.png" data-src="img/hostinger.png" alt="Hostinger Logo"
-                                            class="litespeed-loaded" data-was-processed="true" width="190px">
-                                    </a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">Coupon: SAVEBIG</p>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Free Domain & SSL
-                                        </li>
-                                        <li class="discount-sec">30- Money Back Guarantee
-                                        </li>
-                                        <li class="discount-sec">NVMe SSD Drive
-                                        </li>
-                                        <li class="discount-sec">Free website migration
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$1.99/month
-                                        </li>
-                                        <li class="discount-sec">Save Additional 7% with promo SAVEBIG on all hosting plan
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/hostingermain/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/scalahosting-web-hosting/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/scalahosting/" target="_blank">
-                                        <img style="margin-top:10px; margin-bottom:15px;" data-lazyloaded="1"
-                                            src="img/scalahosting-1.png" data-src="img/scalahosting-1.png"
-                                            alt="Interserver Logo" class="litespeed-loaded" data-was-processed="true"
-                                            width="190px">
-                                    </a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Free & Effortless Migration
-                                        </li>
-                                        <li class="discount-sec">Fully Cloud Infrastructure
-                                        </li>
-                                        <li class="discount-sec">Anytime Unconditional Money-back Guarantee.
-                                        </li>
-                                        <li class="discount-sec">Free Domain & SSL Certificates
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$2.99/month
-                                        </li>
-                                        <li class="discount-sec">Save Additional 10% on all Hosting plan with Promo
-                                            GOOGIEHOST(No coupon
-                                            required with Affiliate)
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/scalahosting-web-hosting/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/cloudways/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/cloudways/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="img/Cloudways-color.png" data-src="img/Cloudways-color.png"
-                                            class="litespeed-loaded" data-was-processed="true" width="220px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">24/7 expert support
-                                        </li>
-                                        <li class="discount-sec">High Availability
-                                        </li>
-                                        <li class="discount-sec">Build in Scalability
-                                        </li>
-                                        <li class="discount-sec">Real-Time Monitoring
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">3-day free trial
-                                        </li>
-
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/cloudways/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/liquid-web/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/liquid-web/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="https://googiehost.com/blog/wp-content/uploads/2022/07/Liquid-Web-color-logo.png"
-                                            data-src="https://googiehost.com/blog/wp-content/uploads/2022/07/Liquid-Web-color-logo.png"
-                                            alt="liquid-web" class="litespeed-loaded" data-was-processed="true"
-                                            width="270px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Hassle-free migrations
-                                        </li>
-                                        <li class="discount-sec">Seamless migration, exceptional savings
-                                        </li>
-                                        <li class="discount-sec">Unrivaled, 24/7 technical support
-                                        </li>
-                                        <li class="discount-sec">Ultimate reliability
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$5/month
-                                        </li>
-                                        <li class="discount-sec">Save Upto 80% Extra on Annual VPS
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                </td>
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/liquid-web/" target="_blank"
-                                            rel="noopener">Grab Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/inmotionhosting/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/inmotionhosting/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="https://googiehost.com/blog/wp-content/uploads/2024/11/InmotionHosting-coupon.png"
-                                            data-src="https://googiehost.com/blog/wp-content/uploads/2024/11/InmotionHosting-coupon.png"
-                                            alt="inmotionhosting" class="litespeed-loaded" data-was-processed="true"
-                                            width="270px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Free Website Transfer
-                                        </li>
-                                        <li class="discount-sec">Free Domain on Select Plans
-                                        </li>
-                                        <li class="discount-sec">Real Human Support
-                                        </li>
-
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$1.99/month
-                                        </li>
-                                        <li class="discount-sec">Up to 80% across all our hosting
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                </td>
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/inmotionhosting/" target="_blank"
-                                            rel="noopener">Grab Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a><br>
-
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/digitalocean/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/digitalocean/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="https://googiehost.com/blog/wp-content/uploads/2024/11/digitalocean-coupon.png"
-                                            data-src="https://googiehost.com/blog/wp-content/uploads/2024/11/digitalocean-coupon.png"
-                                            class="litespeed-loaded" data-was-processed="true" width="220px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Bonus Credits on Signup $100 for New customer
-                                        </li>
-                                        <li class="discount-sec">Exclusive Managed Services
-                                        </li>
-                                        <li class="discount-sec">Free Upgrades on Droplets
-                                        </li>
-
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$100 Credit for New Customer signup
-                                        </li>
-
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/digitalocean/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/verpex/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/verpex/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="https://googiehost.com/blog/wp-content/uploads/2024/11/Verpex-coupon.png
-                                            "
-                                            data-src="https://googiehost.com/blog/wp-content/uploads/2024/11/Verpex-coupon.png                                            "
-                                            class="litespeed-loaded" data-was-processed="true" width="220px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">Coupon: 2024BF</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">99.95% Support Case Resolution
-                                        </li>
-                                        <li class="discount-sec">Daily Backup
-                                        </li>
-                                        <li class="discount-sec">Free Domain Name
-                                        </li>
-                                        <li class="discount-sec">24/7 Developer Support
-                                        </li>
-
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">Upto 90% OFF on all Shared Plans
-                                        </li>
-                                        <li class="discount-sec">Save Additional 5% with Promo 5OFFNOW on all hosting plan
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/verpex/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/nexcess/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/nexcess/" target="_blank">
-                                        <img style="margin-top:5px; margin-bottom:5px;" data-lazyloaded="1"
-                                            src="img/nexcess-color.png" data-src="img/nexcess-color.png"
-                                            alt="Nexcess Logo" class="litespeed-loaded" data-was-processed="true"
-                                            width="170px">
-                                    </a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Elite performance
-                                        </li>
-                                        <li class="discount-sec">Ultra-flexible infrastructure
-                                        </li>
-                                        <li class="discount-sec">Expert support
-                                        </li>
-
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">Flat 75% OFF
-                                        </li>
-                                        <li class="discount-sec">Additional 5% OFF on all Verpex services - Code: "5OFFNOW"
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/nexcess/" target="_blank"
-                                            rel="noopener">Grab Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a><br>
-
-                                </td>
-                            </tr>
-
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/a2hosting/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/a2hosting/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="img/logo-a2hosting.png" data-src="img/logo-a2hosting.png"
-                                            class="litespeed-loaded" data-was-processed="true" width="190px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">Up To 20x Faster Turbo
-                                        </li>
-                                        <li class="discount-sec">Guru Crew Support
-                                        </li>
-                                        <li class="discount-sec">Free Website Migration
-                                        </li>
-                                        <li class="discount-sec">99.9% Uptime Commitment
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$1.99/month
-                                        </li>
-                                        <li class="discount-sec">Save Up to 80% Now
-                                        </li>
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/a2hosting/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a><br>
-
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/bluehostwp/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/bluehostwp/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="https://googiehost.com/blog/wp-content/uploads/2024/11/bluehost-coupon.png"
-                                            data-src="https://googiehost.com/blog/wp-content/uploads/2024/11/bluehost-coupon.png"
-                                            alt="bluehost" class="litespeed-loaded" data-was-processed="true"
-                                            width="270px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">NVMe SSD Drive
-                                        </li>
-                                        <li class="discount-sec">Free Domain
-                                        </li>
-                                        <li class="discount-sec">Recommended By WordPress
-                                        </li>
-                                        <li class="discount-sec">Free Migration from WP Experts
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$2.50/Month</li>
-                                        <li class="discount-sec">80% OFF on Website and Online Stores </li>
-                                    </ul>
-                                </td>
-
-                                </td>
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/bluehostwp/" target="_blank"
-                                            rel="noopener">Grab Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a>
-                                </td>
-                            </tr>
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/hostarmada';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/hostarmada" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="img/hostarmada.png" data-src="img/hostarmada.png"
-                                            class="litespeed-loaded" data-was-processed="true" width="200px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec">FREE Website Migration
-                                        </li>
-                                        <li class="discount-sec">FREE cPanel Control Panel
-                                        </li>
-                                        <li class="discount-sec">FREE Daily Backups
-                                        </li>
-                                        <li class="discount-sec">FREE SSL for all websites
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">$1.99/month
-                                        </li>
-                                        <li class="discount-sec">Additional 10% off with promo GOOGIEHOST75 on all hosting
-                                            plan
-                                        </li>
-
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/hostarmada" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a><br>
-
-                                </td>
-
-
-                            <tr onclick="location.href='https://googiehost.com/blog/go/chemicloud/';">
-                                <td style="border-radius: 10px 0px 0px 10px; border-right: 2px solid #0000001A;">
-                                    <a href="https://googiehost.com/blog/go/chemicloud/" target="_blank">
-                                        <img style="margin-top:15px; margin-bottom:10px;" data-lazyloaded="1"
-                                            src="https://googiehost.com/blog/wp-content/uploads/2024/11/chemicloud-coupon.png"
-                                            data-src="https://googiehost.com/blog/wp-content/uploads/2024/11/chemicloud-coupon.png"
-                                            class="litespeed-loaded" data-was-processed="true" width="200px"></a>
-
-                                    <br>
-                                    <span style="color:orange"><i class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i><i class="md-icon-star"></i><i
-                                            class="md-icon-star"></i></span>
-                                    <p class="coupon_code">AUTO-APPLIED</p>
-
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-
-                                    <ul class="deal-list text-left">
-                                        <li class="discount-sec"> 24/7 Award-winning support
-                                        </li>
-                                        <li class="discount-sec"> Free domain
-                                        </li>
-                                        <li class="discount-sec"> Hassle-free migration
-                                        </li>
-
-                                    </ul>
-                                </td>
-                                <td style="border-right: 2px solid #0000001A;">
-                                    <h5 class="deal-heading"> Whats the Deal</h5>
-                                    <ul class="deal-list text-left">
-
-                                        <li class="discount-sec">Save Additional with promo GOOGIEHOST
-                                        </li>
-
-                                    </ul>
-                                </td>
-
-                                <td style="border-radius: 0px 10px 10px 0px; padding: 0px;" class="btn-col">
-                                    <button class="couponabutton coupon-btn">
-                                        <a href="https://googiehost.com/blog/go/chemicloud/" target="_blank"
-                                            rel="noopener">Grab
-                                            Deal <i class="fa-solid fa-arrow-right"></i>
-                                    </button></a><br>
-                                </td>
-
-                                <!-- Repeat <tr> for each hosting provider -->
-                        </tbody>
-                    </table>
-
-
-
+        <section class="py-5 position-relative bg-white z-1">
+            <div class="container">
+                <div class="inner text-center block-double-tb">
+                    <h2 class=" sec-heading">Best Web Hosting Sale 2025 </h2>
+                    <!-- <span class="heading-4 blink-soft">Sale Live!</span> -->
+                    <p class="sec-subheading text-center">Googiehost blog is your one-stop solution to finding the best web
+                        hosting services. Find out which top webhost are the best at saving your money & time. Get reliable
+                        facts and reviews for the top rated hosting solutions.</p>
+                    <p class="sec-subheading text-center">Site Owner? You Deserve Peace of Mind! Compare Trusted & Checked
+                        Web Hosting Services Here. We've
+                        Compared 15 Flexible, Cost-Effective Web Hosting Services Your Dream Project Website.</p>
                 </div>
-                <!-- new table e-->
-                <!-- Section 2 -->
-                <div class="">
-                    <div class="card-x" style="padding: 30px;">
-                        <p>Do you know that you can get a Virtual Private Server
-                            account at
-                            the cost
-                            of shared hosting? But to avail of this, you should wait for festive seasons like Web
-                            Hosting
-                            offers, Cyber Monday and Black Friday Sales.<br><br>
-                            Because most reputed and established hosting companies give a hefty discount on the annual
-                            package
-                            during a festive season. It includes big brands like
-                            <a href="https://googiehost.com/blog/interserver-review" class="text-decoration-none"
-                                target="_blank">InterServer</a>,
-                            <a href="https://googiehost.com/blog/bluehost-review/" class="text-decoration-none"
-                                target="_blank">BlueHost</a>, <a href="https://googiehost.com/blog/hostarmada-reviews/"
-                                class="text-decoration-none" target="_blank">HostArmada</a>,
-                            <a href="https://googiehost.com/blog/ultahost-review/" class="text-decoration-none"
-                                target="_blank">UltaHost</a>, <a href="https://googiehost.com/blog/chemicloud-reviews/"
-                                class="text-decoration-none" target="_blank">Chemicloud</a>,
-                            <a href="https://googiehost.com/blog/wpx-hosting-reviews/" class="text-decoration-none"
-                                target="_blank">WPX Hosting</a>,
-                            <a href="https://googiehost.com/blog/kamatera-review/" class="text-decoration-none"
-                                target="_blank">Kamatera</a>, <a href="https://googiehost.com/blog/go/cloudways/"
-                                class="text-decoration-none" target="_blank">CloudWays</a>, and the
-                            list
-                            continues. It’s challenging to find the right hosting provider based on Performance, Uptime,
-                            Features, Support, and pricing for sure. But with us, you can host your WordPress website
-                            easily.<br><br>We have mentioned below the <a
-                                href="https://googiehost.com/blog/best-managed-web-hosting/" class="text-decoration-none"
-                                target="_blank" rel="noopener"><b>Best managed web hosting</b></a> deals where you will
-                            get amazing huge
-                            discounts upto 90% OFF on the best web hosting plan.</b>.
-                        </p>
+
+                {{-- hosting plan section --}}
+                @foreach ($data->paidHosting as $pagePaid)
+                    <div class="row sale-row text-center mb-4 cursor-pointer"
+                        onclick="window.location.href='{{ $pagePaid->button_link }}'">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div class="d-grid">
+                                <a href="{{ $pagePaid->button_link }}"><img class="img-fluid"
+                                        src="{{ asset('storage/paidplans/paidHosting/' . $pagePaid->plan_image) }}"></a>
+
+                                <div>
+                                    <span style="color:orange">
+                                        @for ($i = 0; $i < $pagePaid->rating; $i++)
+                                            <i class="fa-solid fa-star"></i>
+                                        @endfor
+                                    </span>
+                                    <p class="mb-0 disc-coupon">{{ strtoupper($pagePaid->disc_coupon) }}</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3 deal-sec">
+                            <div>
+                                {!! $pagePaid->listing_points !!}
+                            </div>
+                        </div>
+                        <div class="col-md-3 deal-sec">
+                            <div>
+                                <h5 class="deal-heading">Whats the Deal</h5>
+                                {!! $pagePaid->deal_points !!}
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-2 d-flex align-items-center justify-content-center">
+                            <div>
+                                <a href="{{ $pagePaid->button_link }}" target="_blank" rel="noopener"><button
+                                        class="grab-deal-btn">{{ $pagePaid->button_text }}&nbsp;<i
+                                            class="fa-solid fa-arrow-right"></i>
+                                    </button></a>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+
+
             </div>
-        </div>
+        </section>
         <!-- YouStable End -->
         <section class="review_description">
 
@@ -2789,7 +2106,7 @@
 
                             <ul class="sales-tips text-left" style=" padding:20px;">
                                 <!-- <li><a href="https://googiehost.com/blog/web-hosting-buying-guide-tips" target="_blank">Web
-                                                                                    Hosting Buying Guide and Tips</a></li> -->
+                                                                                                                                                                                                                                                                                                                                    Hosting Buying Guide and Tips</a></li> -->
                                 <li><i class="fa-solid fa-check"></i><a
                                         href="https://googiehost.com/blog/best-vps-hosting" target="_blank">Best VPS
                                         Hosting
@@ -2806,8 +2123,7 @@
                                         target="_blank">Demands For VPN Apps</a>
                                 </li>
                                 <li><i class="fa-solid fa-check"></i><a
-                                        href="https://googiehost.com/blog/best-managed-web-hosting/"
-                                        target="_blank">Best
+                                        href="https://googiehost.com/blog/best-managed-web-hosting/" target="_blank">Best
                                         Managed
                                         Web Hosting</a></li>
                             </ul>
