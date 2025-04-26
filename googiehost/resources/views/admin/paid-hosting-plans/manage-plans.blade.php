@@ -2,16 +2,16 @@
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center">
         <div>
-            <h1>Manage Services Section</h1>
+            <h1>Manage Paid Hosting Plans</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Admin</a></li>
-                    <li class="breadcrumb-item active">Services Section</li>
+                    <li class="breadcrumb-item active">Paid Hosting Plans</li>
                 </ol>
             </nav>
         </div>
         <div>
-            <a href="{{ route('admin.services-section') }}" class="btn btn-primary">
+            <a href="{{ route('admin.paid-hosting-plans') }}" class="btn btn-primary">
                 <i class="bi bi-skip-backward-circle"></i> Back
             </a>
         </div>
@@ -25,12 +25,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            {{ isset($data->id) ? 'Update' : 'Create' }} Services Section
+                            {{ isset($data->id) ? 'Update' : 'Create' }} Paid Hosting Plans
                         </h5>
 
-                        <form class="row g-3" method="POST"
-                            action="{{ isset($data->id) ? route('services.store', $data->id) : route('services.store') }}"
-                            enctype="multipart/form-data">
+                        <form class="row g-3" enctype="multipart/form-data" method="POST"
+                            action="{{ isset($data->id) ? route('paid-hosting-plans.store', $data->id) : route('paid-hosting-plans.store') }}">
                             @csrf
                             <input type="hidden" name="id" value="{{ $data->id ?? '' }}">
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
@@ -49,26 +48,41 @@
                             </div>
 
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
-                                <label for="title" class="form-label">Image</label>
-                                <input type="file" name="image" id="image" class="form-control">
-                                @error('title')
+                                <label for="rating" class="form-label">Rating</label>
+                                <input type="text" class="form-control" name="rating" id="rating"
+                                    placeholder="Enter rating numeric" value="{{ old('rating', $data->rating ?? '') }}">
+                                @error('rating')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
-                                <label for="title" class="form-label">Service Title</label>
-                                <textarea class="tinymce-editor" id="title" name="title">{{ old('title', $data->title ?? '') }}</textarea>
-                                @error('title')
+                                <label for="listing_point" class="form-label">Listing Point</label>
+                                <textarea class="tinymce-editor" id="listing_point" name="listing_point">{{ old('listing_point', $data->listing_points ?? '') }}</textarea>
+                                @error('listing_point')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
-                                <label for="description" class="form-label">Description</label>
-                                <textarea class="tinymce-editor" id="description" name="description">{{ old('description', $data->description ?? '') }}</textarea>
-                                @error('description')
+                                <label for="deal_points" class="form-label">Deal Points</label>
+                                <textarea class="tinymce-editor" id="deal_points" name="deal_points">{{ old('deal_points', $data->deal_points ?? '') }}</textarea>
+                                @error('deal_points')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
+
+                            <div class="mb-3 col-12 col-lg-12 col-md-12">
+                                <label for="plan_image" class="form-label">Plan Image</label>
+                                <input type="file" class="form-control" id="plan_image" name="plan_image">
+                                @if (!empty($data->plan_image))
+                                    <img src="{{ asset('storage/paidplans/paidHosting/' . $data->plan_image) }}"
+                                        alt="">
+                                @endif
+
+                                @error('plan_image')
+                                    <div class="message">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="button_text" class="form-label">Button Text</label>
                                 <input type="text" name="button_text" id="button_text" class="form-control"

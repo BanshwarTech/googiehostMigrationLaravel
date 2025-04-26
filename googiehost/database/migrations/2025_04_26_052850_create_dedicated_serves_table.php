@@ -11,23 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hero_sections', function (Blueprint $table) {
+        Schema::create('dedicated_serves', function (Blueprint $table) {
             $table->id();
-            // Define the foreign key column first
             $table->unsignedBigInteger('page_id');
-            $table->string('title');
-            $table->string('subtitle')->nullable();
-            $table->string('listing_point')->nullable();
-            $table->string('image')->nullable();
+            $table->string('logo_image')->nullable();
+            $table->string('read_review_url')->nullable();
+            $table->string('deal_points')->nullable();
+            $table->string('discount')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_link')->nullable();
+            $table->string('rating')->nullable();
+            $table->string('short_desc')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
-
             // Then apply the foreign key constraint
             $table->foreign('page_id')
                 ->references('id')
                 ->on('manage_pages')
                 ->onDelete('cascade');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hero_sections');
+        Schema::dropIfExists('dedicated_serves');
     }
 };

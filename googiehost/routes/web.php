@@ -3,11 +3,15 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\PaidPlansController;
 use App\Http\Controllers\Admin\ServicesController;
+use App\Http\Controllers\Admin\VpsPlansController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/freehosting', [HomeController::class, 'freehosting'])->name('freehosting');
+Route::get('/web-hosting-sale-coupons', [HomeController::class, 'webHostingSaleCoupons'])->name('web.hosting.sale.coupons');
 
 
 // Admin routes
@@ -42,4 +46,19 @@ Route::prefix('admin')->group(function () {
     Route::post('/faq-store/{id?}', [FaqController::class, 'upsertProcess'])->name('faq.store');
     Route::get('/faq-status/{id}/{status}', [FaqController::class, 'status'])->name('faq.status');
     Route::delete('/delete-faq-section/{id?}', [FaqController::class, 'delFaqSection'])->name('faq.delete');
+
+    // manage paid plans
+    Route::get('/paid-hosing-plans', [PaidPlansController::class, 'index'])->name('admin.paid-hosting-plans');
+    Route::get('/manage-paid-hosting-plans/{id?}', [PaidPlansController::class, 'upsert'])->name('manage.paid-hosting-plans');
+    Route::post('/paid-hosting-plans-store/{id?}', [PaidPlansController::class, 'upsertProcess'])->name('paid-hosting-plans.store');
+    Route::post('/paid-hosting-plans-status/{id?}', [PaidPlansController::class, 'status'])->name('paid-hosting-plans.status');
+    Route::delete('/delete-paid-hosting-plans/{id?}', [PaidPlansController::class, 'delPaidPlans'])->name('paid-hosting-plans.delete');
+
+
+    // manage vps plans
+    Route::get('/vps-hosing-plans', [VpsPlansController::class, 'index'])->name('admin.vps-hosting-plans');
+    Route::get('/manage-vps-hosting-plans/{id?}', [VpsPlansController::class, 'upsert'])->name('manage.vps-hosting-plans');
+    Route::post('/vps-hosting-plans-store/{id?}', [VpsPlansController::class, 'upsertProcess'])->name('vps-hosting-plans.store');
+    Route::post('/vps-hosting-plans-status/{id?}', [VpsPlansController::class, 'status'])->name('vps-hosting-plans.status');
+    Route::delete('/delete-vps-hosting-plans/{id?}', [VpsPlansController::class, 'delVPSPlans'])->name('vps-hosting-plans.delete');
 });

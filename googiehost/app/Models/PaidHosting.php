@@ -6,18 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class HeroSection extends Model
+class PaidHosting extends Model
 {
     use HasFactory, SoftDeletes;
     protected $fillable = [
         'page_id',
-        'title',
-        'subtitle',
-        'listing_point',
-        'image',
-        'status',
+        'plan_image',
+        'rating',
+        'listing_points',
+        'deal_points',
+        'button_text',
+        'button_link',
+        'status'
     ];
-    public function page()
+    public function pagePaid()
     {
         return $this->belongsTo(ManagePages::class, 'page_id');
     }

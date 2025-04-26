@@ -18,12 +18,24 @@ class ManagePages extends Model
     {
         return $this->hasMany(HeroSection::class, 'page_id');
     }
-    public function serviceService()
+    public function serviceSections()
     {
         return $this->hasMany(ServiceSection::class, 'page_id');
     }
     public function faqSection()
     {
         return $this->hasMany(faq::class, 'page_id');
+    }
+    public function vpsHosting()
+    {
+        return $this->hasMany(VpsHosting::class, 'page_id');
+    }
+    public function paidHosting()
+    {
+        return $this->hasMany(PaidHosting::class, 'page_id');
+    }
+    public function dedicatedServer()
+    {
+        return $this->hasMany(DedicatedServe::class, 'page_id');
     }
 }

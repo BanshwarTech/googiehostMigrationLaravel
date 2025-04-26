@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hero_sections', function (Blueprint $table) {
+        Schema::create('paid_hostings', function (Blueprint $table) {
             $table->id();
-            // Define the foreign key column first
             $table->unsignedBigInteger('page_id');
-            $table->string('title');
-            $table->string('subtitle')->nullable();
-            $table->string('listing_point')->nullable();
-            $table->string('image')->nullable();
+            $table->string('plan_image')->nullable();
+            $table->string('rating')->nullable();
+            $table->text('listing_points')->nullable();
+            $table->text('deal_points')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_link')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
 
             // Then apply the foreign key constraint
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hero_sections');
+        Schema::dropIfExists('paid_hostings');
     }
 };

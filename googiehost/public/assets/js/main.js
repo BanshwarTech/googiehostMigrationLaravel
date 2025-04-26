@@ -257,7 +257,7 @@
     toolbar_mode: 'sliding',
     contextmenu: 'link image table',
     skin: useDarkMode ? 'oxide-dark' : 'oxide',
-    content_css: useDarkMode ? 'light' : 'default',
+    content_css: useDarkMode ? 'dark' : 'dark',
     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
   });
 

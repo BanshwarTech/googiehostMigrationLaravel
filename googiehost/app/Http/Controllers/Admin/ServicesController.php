@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ManagePages;
 use App\Models\ServiceSection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ServicesController extends Controller
@@ -29,7 +30,7 @@ class ServicesController extends Controller
             $validator = Validator::make($request->all(), [
                 'page_id' => 'required|numeric|exists:manage_pages,id',
                 'title' => 'required|string|max:255',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
                 'description' => 'nullable|string',
                 'button_text' => 'nullable|string|max:255',
                 'button_link' => 'nullable|string|max:255',
@@ -54,12 +55,23 @@ class ServicesController extends Controller
             $service->button_text = $request->input('button_text');
             $service->button_link = $request->input('button_link');
             $service->status = 'active';
+
+            // Handle profile image upload
             if ($request->hasFile('image')) {
+                // Delete old image if it exists
+                if ($service->image && Storage::exists('public/uploads/service/' . $service->image)) {
+                    Storage::delete('public/uploads/service/' . $service->image);
+                }
+
+                // Upload new image
                 $image = $request->file('image');
-                $imageName = time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/services'), $imageName);
-                $service->image = 'images/services/' . $imageName;
+                $image_name = time() . '.' . $image->getClientOriginalExtension();
+                Storage::disk('public')->putFileAs('uploads/service/', $image, $image_name);
+
+                // Save new file name
+                $service->image = $image_name;
             }
+
             $service->save();
 
             return redirect()->route('admin.services-section')->with('success', $msg);

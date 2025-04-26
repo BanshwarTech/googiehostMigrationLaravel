@@ -31,10 +31,10 @@
                  <div class="offcanvas-body">
                      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                          <li class="nav-item">
-                             <a class="nav-link text-white" href="/googiehost/freehosting.php">Free Hosting</a>
+                             <a class="nav-link text-white" href="{{ route('freehosting') }}">Free Hosting</a>
                          </li>
                          <li class="nav-item">
-                             <a class="nav-link text-white" href="/googiehost/web-hosting-sale-coupons.php">Paid
+                             <a class="nav-link text-white" href="{{ route('web.hosting.sale.coupons') }}">Paid
                                  Hosting <span class="badge">Save 90%*</span></a>
                          </li>
 

@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hero_sections', function (Blueprint $table) {
+        Schema::create('vps_hostings', function (Blueprint $table) {
             $table->id();
-            // Define the foreign key column first
             $table->unsignedBigInteger('page_id');
-            $table->string('title');
-            $table->string('subtitle')->nullable();
-            $table->string('listing_point')->nullable();
-            $table->string('image')->nullable();
+            $table->string('logo_image')->nullable();
+            $table->string('offer_image')->nullable();
+            $table->string('title')->nullable();
+            $table->string('description')->nullable();
+            $table->string('coupon_code')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_link')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
-
             // Then apply the foreign key constraint
             $table->foreign('page_id')
                 ->references('id')
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hero_sections');
+        Schema::dropIfExists('vps_hostings');
     }
 };

@@ -28,7 +28,7 @@
                             {{ isset($data->id) ? 'Update' : 'Create' }} Hero Section
                         </h5>
 
-                        <form class="row g-3" method="POST"
+                        <form class="row g-3" enctype="multipart/form-data" method="POST"
                             action="{{ isset($data->id) ? route('hero.store', $data->id) : route('hero.store') }}">
                             @csrf
                             <input type="hidden" name="id" value="{{ $data->id ?? '' }}">
@@ -65,6 +65,13 @@
                                 <label for="listing_point" class="form-label">Listing Point</label>
                                 <textarea class="tinymce-editor" id="listing_point" name="listing_point">{{ old('hero_title', $data->listing_point ?? '') }}</textarea>
                                 @error('listing_point')
+                                    <div class="message">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="mb-3 col-12 col-lg-6 col-md-6">
+                                <label for="image" class="form-label">Hero Image</label>
+                                <input type="file" class="form-control" id="image" name="image">
+                                @error('image')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>

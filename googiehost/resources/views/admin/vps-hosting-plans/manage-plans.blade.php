@@ -2,16 +2,16 @@
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center">
         <div>
-            <h1>Manage Services Section</h1>
+            <h1>Manage Paid Hosting Plans</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Admin</a></li>
-                    <li class="breadcrumb-item active">Services Section</li>
+                    <li class="breadcrumb-item active">Paid Hosting Plans</li>
                 </ol>
             </nav>
         </div>
         <div>
-            <a href="{{ route('admin.services-section') }}" class="btn btn-primary">
+            <a href="{{ route('admin.paid-hosting-plans') }}" class="btn btn-primary">
                 <i class="bi bi-skip-backward-circle"></i> Back
             </a>
         </div>
@@ -25,12 +25,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            {{ isset($data->id) ? 'Update' : 'Create' }} Services Section
+                            {{ isset($data->id) ? 'Update' : 'Create' }} Paid Hosting Plans
                         </h5>
 
-                        <form class="row g-3" method="POST"
-                            action="{{ isset($data->id) ? route('services.store', $data->id) : route('services.store') }}"
-                            enctype="multipart/form-data">
+                        <form class="row g-3" enctype="multipart/form-data" method="POST"
+                            action="{{ isset($data->id) ? route('vps-hosting-plans.store', $data->id) : route('vps-hosting-plans.store') }}">
                             @csrf
                             <input type="hidden" name="id" value="{{ $data->id ?? '' }}">
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
@@ -48,27 +47,61 @@
                                 @enderror
                             </div>
 
+
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
-                                <label for="title" class="form-label">Image</label>
-                                <input type="file" name="image" id="image" class="form-control">
+                                <label for="logo_image" class="form-label">Logo Image</label>
+                                <input type="file" class="form-control" id="logo_image" name="logo_image">
+                                @if (!empty($data->logo_image))
+                                    <img src="{{ asset('storage/paidplans/vpsHosting/logo_image/' . $data->logo_image) }}"
+                                        alt="" width="150">
+                                @endif
+
+                                @error('logo_image')
+                                    <div class="message">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3 col-12 col-lg-6 col-md-6">
+                                <label for="offer_image" class="form-label">Offer Image</label>
+                                <input type="file" class="form-control" id="offer_image" name="offer_image">
+                                @if (!empty($data->offer_image))
+                                    <img src="{{ asset('storage/paidplans/vpsHosting/offer_image/' . $data->offer_image) }}"
+                                        alt="" height="50" width="50">
+                                @endif
+
+                                @error('offer_image')
+                                    <div class="message">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3 col-12 col-lg-6 col-md-6">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" name="title" id="title"
+                                    value="{{ old('title', $data->title ?? '') }}">
                                 @error('title')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="mb-3 col-12 col-lg-6 col-md-6">
-                                <label for="title" class="form-label">Service Title</label>
-                                <textarea class="tinymce-editor" id="title" name="title">{{ old('title', $data->title ?? '') }}</textarea>
-                                @error('title')
-                                    <div class="message">{{ $message }}</div>
-                                @enderror
-                            </div>
+
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="tinymce-editor" id="description" name="description">{{ old('description', $data->description ?? '') }}</textarea>
+                                <input type="text" class="form-control" name="description" id="description"
+                                    value="{{ old('description', $data->description ?? '') }}">
                                 @error('description')
                                     <div class="message">{{ $message }}</div>
                                 @enderror
                             </div>
+
+                            <div class="mb-3 col-12 col-lg-6 col-md-6">
+                                <label for="coupon_code" class="form-label">Coupon Code</label>
+                                <input type="text" name="coupon_code" id="coupon_code" class="form-control"
+                                    value="{{ old('coupon_code', $data->coupon_code ?? '') }}">
+                                @error('coupon_code')
+                                    <div class="message">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="button_text" class="form-label">Button Text</label>
                                 <input type="text" name="button_text" id="button_text" class="form-control"
