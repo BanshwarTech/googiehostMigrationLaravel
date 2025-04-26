@@ -58,13 +58,13 @@
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('faq.status', ['id' => $paid->id, 'status' => 'active']) }}">
+                                                            href="{{ route('vps.status', ['id' => $paid->id, 'status' => 'active']) }}">
                                                             Active
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('faq.status', ['id' => $paid->id, 'status' => 'inactive']) }}">
+                                                            href="{{ route('vps.status', ['id' => $paid->id, 'status' => 'inactive']) }}">
                                                             InActive
                                                         </a>
                                                     </li>
@@ -73,7 +73,7 @@
                                             ||<a href="{{ route('manage.vps-hosting-plans', $paid->id) }}"
                                                 class="btn btn-primary"><i class="bx bxs-edit"></i> Edit</a>
                                             ||
-                                            <form action="{{ route('vps-hosting-plans.delete', $paid->id) }}" method="POST"
+                                            <form action="{{ route('vps.delete', $paid->id) }}" method="POST"
                                                 style="display: inline-block;"
                                                 onsubmit="return confirm('Are you sure you want to delete this page?');">
                                                 @csrf

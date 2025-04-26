@@ -2,17 +2,17 @@
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center">
         <div>
-            <h1>Paid Hosting Plans</h1>
+            <h1>Dedicated Hosting Plans</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Admin</a></li>
-                    <li class="breadcrumb-item active">Paid Hosting</li>
+                    <li class="breadcrumb-item active">Dedicated Hosting</li>
                 </ol>
             </nav>
         </div>
         <div>
-            <a href="{{ route('manage.paid-hosting-plans') }}" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> Manage Paid Hosting Plans
+            <a href="{{ route('manage.dedicated-hosting-plans') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Manage Dedicated Hosting Plans
             </a>
         </div>
     </div>
@@ -22,7 +22,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Paid Hosting</h5>
+                        <h5 class="card-title">Dedicated Hosting</h5>
 
 
                         <!-- Table with stripped rows -->
@@ -33,7 +33,7 @@
                                     <th>
                                         Page Name
                                     </th>
-                                    <th>Plan Image</th>
+                                    <th>Logo Image</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -41,9 +41,9 @@
                                 @foreach ($data as $index => $paid)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $paid->pagePaid->page_name }}</td>
-                                        <td><img src="{{ asset('storage/paidplans/paidHosting/' . $paid->plan_image) }}"
-                                                alt="">
+                                        <td>{{ $paid->pageDedicated->page_name }}</td>
+                                        <td><img src="{{ asset('storage/paidplans/dediHosting/' . $paid->logo_image) }}"
+                                                alt="" width="150">
                                         </td>
                                         <td>
                                             <div class="dropdown mb-1">
@@ -54,22 +54,22 @@
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('paid.status', ['id' => $paid->id, 'status' => 'active']) }}">
+                                                            href="{{ route('dedicated.status', ['id' => $paid->id, 'status' => 'active']) }}">
                                                             Active
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('paid.status', ['id' => $paid->id, 'status' => 'inactive']) }}">
+                                                            href="{{ route('dedicated.status', ['id' => $paid->id, 'status' => 'inactive']) }}">
                                                             InActive
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                            ||<a href="{{ route('manage.paid-hosting-plans', $paid->id) }}"
+                                            ||<a href="{{ route('manage.dedicated-hosting-plans', $paid->id) }}"
                                                 class="btn btn-primary"><i class="bx bxs-edit"></i> Edit</a>
                                             ||
-                                            <form action="{{ route('paid.delete', $paid->id) }}" method="POST"
+                                            <form action="{{ route('dedicated.delete', $paid->id) }}" method="POST"
                                                 style="display: inline-block;"
                                                 onsubmit="return confirm('Are you sure you want to delete this page?');">
                                                 @csrf

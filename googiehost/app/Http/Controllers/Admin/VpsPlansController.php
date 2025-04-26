@@ -92,7 +92,7 @@ class VpsPlansController extends Controller
 
             $vps->save();
 
-            return redirect()->route('admin.paid-hosting-plans')->with('success', $msg);
+            return redirect()->route('admin.vps-hosting-plans')->with('success', $msg);
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred while processing your request.');
         }
@@ -105,7 +105,7 @@ class VpsPlansController extends Controller
             $vps = VpsHosting::findOrFail($id);
             $vps->status = $status;
             $vps->save();
-            return redirect()->route('admin.paid-hosting-plans')->with('success', 'VPS Hosting Plans status updated successfully!');
+            return redirect()->route('admin.vps-hosting-plans')->with('success', 'VPS Hosting Plans status updated successfully!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred while updating the VPS Hosting Plans status.');
         }
@@ -115,7 +115,7 @@ class VpsPlansController extends Controller
         try {
             $vps = VpsHosting::findOrFail($id);
             $vps->delete();
-            return redirect()->route('admin.paid-hosting-plans')->with('success', 'VPS Hosting Plans deleted successfully!');
+            return redirect()->route('admin.vps-hosting-plans')->with('success', 'VPS Hosting Plans deleted successfully!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred while deleting the VPS Hosting Plans.');
         }

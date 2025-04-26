@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\DedicatedPlansController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PaidPlansController;
@@ -30,14 +31,14 @@ Route::prefix('admin')->group(function () {
     Route::get('/hero-section', [HeroController::class, 'index'])->name('admin.hero-section');
     Route::get('/manage-hero-section/{id?}', [HeroController::class, 'upsert'])->name('manage.hero-section');
     Route::post('/hero-store/{id?}', [HeroController::class, 'upsertProcess'])->name('hero.store');
-    Route::post('/hero-status/{id?}', [HeroController::class, 'status'])->name('hero.status');
+    Route::get('/hero-status/{id?}/{status}', [HeroController::class, 'status'])->name('hero.status');
     Route::delete('/delete-hero-section/{id?}', [HeroController::class, 'delHeroSection'])->name('hero.delete');
 
     // manage service section 
     Route::get('/services-section', [ServicesController::class, 'index'])->name('admin.services-section');
     Route::get('/manage-services-section/{id?}', [ServicesController::class, 'upsert'])->name('manage.services-section');
     Route::post('/services-store/{id?}', [ServicesController::class, 'upsertProcess'])->name('services.store');
-    Route::post('/services-status/{id?}', [ServicesController::class, 'status'])->name('services.status');
+    Route::get('/services-status/{id?}//{status}', [ServicesController::class, 'status'])->name('services.status');
     Route::delete('/delete-services-section/{id?}', [ServicesController::class, 'delServiceSection'])->name('services.delete');
 
     // manage faq section
@@ -51,14 +52,21 @@ Route::prefix('admin')->group(function () {
     Route::get('/paid-hosing-plans', [PaidPlansController::class, 'index'])->name('admin.paid-hosting-plans');
     Route::get('/manage-paid-hosting-plans/{id?}', [PaidPlansController::class, 'upsert'])->name('manage.paid-hosting-plans');
     Route::post('/paid-hosting-plans-store/{id?}', [PaidPlansController::class, 'upsertProcess'])->name('paid-hosting-plans.store');
-    Route::post('/paid-hosting-plans-status/{id?}', [PaidPlansController::class, 'status'])->name('paid-hosting-plans.status');
-    Route::delete('/delete-paid-hosting-plans/{id?}', [PaidPlansController::class, 'delPaidPlans'])->name('paid-hosting-plans.delete');
+    Route::get('/paid-hosting-plans-status/{id?}/{status}', [PaidPlansController::class, 'status'])->name('paid.status');
+    Route::delete('/delete-paid-hosting-plans/{id?}', [PaidPlansController::class, 'delPaidPlans'])->name('paid.delete');
 
 
     // manage vps plans
     Route::get('/vps-hosing-plans', [VpsPlansController::class, 'index'])->name('admin.vps-hosting-plans');
     Route::get('/manage-vps-hosting-plans/{id?}', [VpsPlansController::class, 'upsert'])->name('manage.vps-hosting-plans');
     Route::post('/vps-hosting-plans-store/{id?}', [VpsPlansController::class, 'upsertProcess'])->name('vps-hosting-plans.store');
-    Route::post('/vps-hosting-plans-status/{id?}', [VpsPlansController::class, 'status'])->name('vps-hosting-plans.status');
-    Route::delete('/delete-vps-hosting-plans/{id?}', [VpsPlansController::class, 'delVPSPlans'])->name('vps-hosting-plans.delete');
+    Route::get('/vps-hosting-plans-status/{id?}/{status}', [VpsPlansController::class, 'status'])->name('vps.status');
+    Route::delete('/delete-vps-hosting-plans/{id?}', [VpsPlansController::class, 'delVPSPlans'])->name('vps.delete');
+
+    // manage dedicated plans
+    Route::get('/dedicated-hosing-plans', [DedicatedPlansController::class, 'index'])->name('admin.dedicated-hosting-plans');
+    Route::get('/manage-dedicated-hosting-plans/{id?}', [DedicatedPlansController::class, 'upsert'])->name('manage.dedicated-hosting-plans');
+    Route::post('/dedicated-hosting-plans-store/{id?}', [DedicatedPlansController::class, 'upsertProcess'])->name('dedicated-hosting-plans.store');
+    Route::get('/dedicated-hosting-plans-status/{id?}/{status}', [DedicatedPlansController::class, 'status'])->name('dedicated.status');
+    Route::delete('/delete-dedicated-hosting-plans/{id?}', [DedicatedPlansController::class, 'delDediPlans'])->name('dedicated.delete');
 });

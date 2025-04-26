@@ -51,10 +51,10 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
-        <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between ">
+            <a href="{{ route('admin.dashboard') }}" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">NiceAdmin</span>
+                <span class="d-none d-lg-block "><img src="{{ asset('images/logo.png') }}" alt=""></span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -284,7 +284,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
+                <a class="nav-link collapsed" href="{{ route('admin.dashboard') }}">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
@@ -322,12 +322,12 @@
             </li><!-- End Components Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse"
                     href="#">
                     <i class="bi bi-menu-button-wide"></i><span>Paid Plans</span><i
                         class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+                <ul id="components-nav1" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="{{ route('admin.paid-hosting-plans') }}">
                             <i class="bi bi-circle"></i><span>Paid Hosings</span>
@@ -339,7 +339,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.faq-section') }}">
+                        <a href="{{ route('admin.dedicated-hosting-plans') }}">
                             <i class="bi bi-circle"></i><span>Dedicated Server</span>
                         </a>
                     </li>

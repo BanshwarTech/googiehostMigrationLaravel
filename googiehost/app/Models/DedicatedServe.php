@@ -17,7 +17,6 @@ class DedicatedServe extends Model
         'discount',
         'button_text',
         'button_link',
-        'rating',
         'short_desc',
         'status'
     ];
