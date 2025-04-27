@@ -44,8 +44,8 @@
                                  Servers <i class="fa-solid fa-angle-down  dropdown-icon"></i>
                              </a>
                              <div class="dropdown-menu rounded" aria-labelledby="serversDropdown" id="serversDropdown">
-                                 <a class="dropdown-item" href="/googiehost/cheap-vps-hosting.php">VPS Hosting</a>
-                                 <a class="dropdown-item" href="/googiehost/cheap-dedicated-server.php">Dedicated
+                                 <a class="dropdown-item" href="{{ route('cheap.vps.hosting') }}">VPS Hosting</a>
+                                 <a class="dropdown-item" href="{{ route('cheap.dedicated.server') }}">Dedicated
                                      Servers</a>
                              </div>
                          </li>

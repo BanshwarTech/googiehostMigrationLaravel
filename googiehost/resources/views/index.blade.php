@@ -1,6 +1,12 @@
 @extends('includes.layout')
 @section('page_title', 'Index')
 @section('content')
+    <style>
+        .hero-section .hero-image-section img {
+            margin: auto;
+            width: 60%;
+        }
+    </style>
     {{-- hero section --}}
     @include('includes.hero-section', ['data' => $data])
 

@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/freehosting', [HomeController::class, 'freehosting'])->name('freehosting');
 Route::get('/web-hosting-sale-coupons', [HomeController::class, 'webHostingSaleCoupons'])->name('web.hosting.sale.coupons');
-
+Route::get('/cheap-vps-hosting', [HomeController::class, 'cheapVpsHosting'])->name('cheap.vps.hosting');
+Route::get('/cheap-dedicated-server', [HomeController::class, 'cheapDedicatedServer'])->name('cheap.dedicated.server');
 
 // Admin routes
 Route::prefix('admin')->group(function () {

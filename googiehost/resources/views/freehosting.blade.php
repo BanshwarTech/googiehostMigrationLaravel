@@ -1,6 +1,12 @@
 @extends('includes.layout')
 @section('page_title', 'Free Hosting - GoogieHost')
 @section('content')
+    <style>
+        .hero-section .hero-image-section img {
+            margin: auto;
+            width: 60%;
+        }
+    </style>
     {{-- include hero section --}}
     @include('includes.hero-section', ['data' => $data])
 

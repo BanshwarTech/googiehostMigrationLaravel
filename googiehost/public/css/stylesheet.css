@@ -93,6 +93,16 @@ p.ylw-highlight {
         0 4px 0 0 var(--dark-brown), 0 4px 6px 0 var(--dark-brown);
 }
 
+.hero-left-section li {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
 /* top header  */
 .top-bar {
     background: var(--primary);
@@ -412,7 +422,7 @@ header .nav-item .dropdown-item {
 
 .hero-section .hero-left-section p {
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     color: var(--white);
 }
 
@@ -428,7 +438,7 @@ header .nav-item .dropdown-item {
 
 .hero-section .hero-image-section img {
     margin: auto;
-    width: 60%;
+    width: 80%;
 }
 
 /* banner section  */
@@ -674,7 +684,7 @@ header .nav-item .dropdown-item {
 }
 
 .sec-heading {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
     color: #000;
     margin-bottom: 12px;
@@ -682,7 +692,7 @@ header .nav-item .dropdown-item {
 
 .sec-subheading {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     margin-bottom: 35px;
 }

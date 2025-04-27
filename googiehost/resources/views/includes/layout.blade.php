@@ -27,16 +27,6 @@
     <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet" />
 
     <style>
-        .hero-left-section li {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 400;
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            list-style: none;
-        }
-
         ul.list-check li::before {
             font-family: "Font Awesome 6 Free";
             content: "\f00c";

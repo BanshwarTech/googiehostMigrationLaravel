@@ -60,4 +60,43 @@ class HomeController extends Controller
 
         return view('web-hosting-sale-coupons', $result);
     }
+
+    public  function cheapVpsHosting()
+    {
+        $result['data'] = ManagePages::with([
+            'heroSections' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'serviceSections' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'faqSection' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'vpsHosting' => function ($query) {
+                $query->where('status', 'active');
+            }
+        ])->findOrFail(4);
+
+        return view('cheap-vps-hosting', $result);
+    }
+    public  function cheapDedicatedServer()
+    {
+        $result['data'] = ManagePages::with([
+            'heroSections' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'serviceSections' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'faqSection' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'dedicatedServer' => function ($query) {
+                $query->where('status', 'active');
+            }
+        ])->findOrFail(5);
+
+        return view('cheap-dedicated-server', $result);
+    }
 }

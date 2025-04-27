@@ -2106,7 +2106,7 @@
 
                             <ul class="sales-tips text-left" style=" padding:20px;">
                                 <!-- <li><a href="https://googiehost.com/blog/web-hosting-buying-guide-tips" target="_blank">Web
-                                                                                                                                                                                                                                                                                                                                    Hosting Buying Guide and Tips</a></li> -->
+                                                                                                                                                                                                                                                                                                                                            Hosting Buying Guide and Tips</a></li> -->
                                 <li><i class="fa-solid fa-check"></i><a
                                         href="https://googiehost.com/blog/best-vps-hosting" target="_blank">Best VPS
                                         Hosting
