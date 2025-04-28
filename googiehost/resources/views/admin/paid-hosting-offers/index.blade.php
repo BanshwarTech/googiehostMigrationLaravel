@@ -2,17 +2,17 @@
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center">
         <div>
-            <h1>VPS Hosting Plans</h1>
+            <h1>Paid Hosting Offer</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Admin</a></li>
-                    <li class="breadcrumb-item active">VPS Hosting</li>
+                    <li class="breadcrumb-item active">Paid Hosting</li>
                 </ol>
             </nav>
         </div>
         <div>
-            <a href="{{ route('manage.vps-hosting-plans') }}" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> Manage VPS Hosting Plans
+            <a href="{{ route('offer.paid.manage') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Manage Paid Hosting Offer
             </a>
         </div>
     </div>
@@ -22,7 +22,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">VPS Hosting</h5>
+                        <h5 class="card-title">Paid Hosting</h5>
 
 
                         <!-- Table with stripped rows -->
@@ -33,8 +33,7 @@
                                     <th>
                                         Page Name
                                     </th>
-                                    <th>Logo Image</th>
-                                    <th>Offer Image</th>
+                                    <th>Plan Image</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -42,12 +41,9 @@
                                 @foreach ($data as $index => $paid)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $paid->pageVps->page_name }}</td>
-                                        <td><img src="{{ asset('storage/paidplans/vpsHosting/logo_image/' . $paid->logo_image) }}"
-                                                alt="" width="150">
-                                        </td>
-                                        <td><img src="{{ asset('storage/paidplans/vpsHosting/offer_image/' . $paid->offer_image) }}"
-                                                alt="" width="50" height="50">
+                                        <td>{{ $paid->pagePaidOffer->page_name }}</td>
+                                        <td><img src="{{ asset('storage/offers/paid/' . $paid->image) }}" alt=""
+                                                width="150">
                                         </td>
                                         <td>
                                             <div class="dropdown mb-1">
@@ -58,22 +54,22 @@
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('vps.status', ['id' => $paid->id, 'status' => 'active']) }}">
+                                                            href="{{ route('offer.paid.status', ['id' => $paid->id, 'status' => 'active']) }}">
                                                             Active
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('vps.status', ['id' => $paid->id, 'status' => 'inactive']) }}">
+                                                            href="{{ route('offer.paid.status', ['id' => $paid->id, 'status' => 'inactive']) }}">
                                                             InActive
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                            ||<a href="{{ route('manage.vps-hosting-plans', $paid->id) }}"
+                                            ||<a href="{{ route('offer.paid.manage', $paid->id) }}"
                                                 class="btn btn-primary"><i class="bx bxs-edit"></i> Edit</a>
                                             ||
-                                            <form action="{{ route('vps.delete', $paid->id) }}" method="POST"
+                                            <form action="{{ route('offer.paid.delete', $paid->id) }}" method="POST"
                                                 style="display: inline-block;"
                                                 onsubmit="return confirm('Are you sure you want to delete this page?');">
                                                 @csrf

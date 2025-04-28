@@ -14,13 +14,13 @@ class DedicatedPlansController extends Controller
     public function index()
     {
         $result['data'] = DedicatedServe::with('pageDedicated')->get();
-        return view('admin.dedicated-hosting-plans.index', $result);
+        return view('admin.dedicated-server-plans.index', $result);
     }
     public function upsert($id = null)
     {
         $result['pages'] = ManagePages::all();
         $result['data'] = $id ? DedicatedServe::findOrFail($id) : null;
-        return view('admin.dedicated-hosting-plans.manage-plans', $result);
+        return view('admin.dedicated-server-plans.manage-plans', $result);
     }
     public function upsertProcess(Request $request, $id = null)
     {

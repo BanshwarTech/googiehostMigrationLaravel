@@ -66,117 +66,121 @@
             </div>
 
 
-            <div class="custom-review-card">
-                <div class="d-flex justify-content-between align-items-center card-heading-sec">
-                    <h5 class="fw-bold">1. YouStable - Overall Best Cheap Dedicated Servers</h5>
-                    <span class="fw-bold">$60/mo</span>
-                </div>
-                <div class="p-4">
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <a href="https://googiehost.com/blog/go/youstable-dedicated/">
-                                <img src="./assets/images/affiliate/youstable-hosting-provider-cheap-dedicated-server.jpg"
-                                    alt="Offer" class="img-fluid rounded"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="rating-sec fw-bold">9.9</span><span class="fw-bold fs-5">/10</span>
-                                    <div class="rating-star"> <i class="fa-solid fa-star star" aria-hidden="true"></i><i
-                                            class="fa-solid fa-star star" aria-hidden="true"></i><i
-                                            class="fa-solid fa-star star" aria-hidden="true"></i><i
-                                            class="fa-solid fa-star star" aria-hidden="true"></i><i
-                                            class="fa-solid fa-star star" aria-hidden="true"></i></div>
-                                </div>
-                                <a href="https://googiehost.com/blog/go/youstable-dedicated/"
-                                    class="best-deal-btn hide-btn1">Claim deal <i class="fa-solid fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+            @foreach ($data->dedicatedServerOffer as $index => $dedicatedServerOffer)
+                <div class="custom-review-card">
+                    <div class="d-flex justify-content-between align-items-center card-heading-sec">
+                        <h5 class="fw-bold">{{ $index + 1 }}. {{ $dedicatedServerOffer->title }}</h5>
+                        <span class="fw-bold">${{ $dedicatedServerOffer->price }}/mo</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <a href="{{ $dedicatedServerOffer->button_link }}">
+                                    <img src="{{ asset('storage/offers/dedicated/' . $dedicatedServerOffer->image) }}"
+                                        alt="Offer" class="img-fluid rounded"></a>
                             </div>
-
-                            <div class="mt-3 stats-box">
-                                <div class="d-flex justify-content-between"><span>Performance</span> <strong>4.9/5</strong>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2"><span>Speed </span><strong>4.9/5</strong>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2"><span>Support </span><strong>4.9/5</strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <a href="https://googiehost.com/blog/go/youstable-dedicated/"
-                                class="best-deal-btn hide-btn">Claim deal <i class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="mt-3">
-
-                        <p class="">YouStable, one of the most Reliable &amp; Cheap Dedicated Server Hosting
-                            providers, offers a wide range of web hosting solutions to Enterprises or Big Corporations
-                            requiring dedicated web resources like CPU/ Storage/ Network Connectivity/ Highest Uplink to run
-                            their websites online 24/7.</p>
-                        <p>It allows Full Root access to your dedicated server to enable the user to configure the server as
-                            required.Moreover, YouStable offers multiple data servers spread all across the globe, letting
-                            you choose the one nearest to your targeted audience, thereby ensuring the lowest latency to the
-                            visitors surfing your websites.At times, when users face issues of any sort, YouStable offers
-                            Consistent &amp; Dedicated 24/7 Expert Support services to resolve technical doubts as well.</p>
-                    </div>
-
-                    <div class="row text-center mt-3 p-2">
-                        <div class="col-md-4 review-feature">
-                            <span class="">Response Time</span><br>
-                            <strong>168.32 ms to load</strong>
-                        </div>
-                        <div class="col-md-4 review-feature">
-                            <span class="">Server Uptime</span><br>
-                            <strong>99.99%</strong>
-                        </div>
-                        <div class="col-md-4 review-feature">
-                            <span class="">Live Status</span><br>
-                            <strong class="online">Online</strong>
-                        </div>
-                    </div>
-
-                    <div class="mt-3">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item key-feature-sec">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button key-feature" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFeature1" aria-expanded="true"
-                                        aria-controls="collapseFeature1">
-                                        Key Features that make YouStable OutStanding:
-                                    </button>
-                                </h2>
-                                <div id="collapseFeature1" class="accordion-collapse collapse show"
-                                    data-bs-parent="#accordionExample" style="">
-                                    <div class="accordion-body">
-                                        <div class="hosting-key-features">
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>Full Root Access to your Server</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>1Gbps-10Gbps Uplink, 10TB Bandwidth</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>DDR4 RAM &amp; NVMe SSD Storage)</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>Multiple OS (Windows/ Linux)</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>Multiple Data Centers</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>Free 24/7 Server Monitoring Add-on.</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>DDoS Protectected, BitNinja Security &amp;
-                                                Imunify360</div>
-                                            <div><i class="fa-solid fa-check feature-check-symbol"
-                                                    aria-hidden="true"></i>24/7 Support.</div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span
+                                            class="rating-sec fw-bold">{{ $dedicatedServerOffer->number_rating }}</span><span
+                                            class="fw-bold fs-5">/10</span>
+                                        <div class="rating-star">
+                                            @for ($i = 0; $i < $dedicatedServerOffer->star_rating; $i++)
+                                                <i class="fa-solid fa-star star" aria-hidden="true"></i>
+                                            @endfor
                                         </div>
+                                    </div>
+                                    <a href="{{ $dedicatedServerOffer->button_link }}"
+                                        class="best-deal-btn hide-btn1">Claim deal <i class="fa-solid fa-arrow-right"
+                                            aria-hidden="true"></i></a>
+                                </div>
+
+                                <div class="mt-3 stats-box">
+                                    <div class="d-flex justify-content-between"><span>Performance</span>
+                                        <strong>{{ $dedicatedServerOffer->performance }}/5</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-2"><span>Speed
+                                        </span><strong>{{ $dedicatedServerOffer->speed }}/5</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-2"><span>Support
+                                        </span><strong>{{ $dedicatedServerOffer->support }}/5</strong>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3">
+                                <a href="https://googiehost.com/blog/go/youstable-dedicated/"
+                                    class="best-deal-btn hide-btn">Claim deal <i class="fa-solid fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
 
+                        <div class="mt-3">
+
+                            {!! $dedicatedServerOffer->description !!}
+                        </div>
+
+                        <div class="row text-center mt-3 p-2">
+                            <div class="col-md-4 review-feature">
+                                <span class="">Response Time</span><br>
+                                <strong>{{ $dedicatedServerOffer->response_time }} ms to load</strong>
+                            </div>
+                            <div class="col-md-4 review-feature">
+                                <span class="">Server Uptime</span><br>
+                                <strong>{{ $dedicatedServerOffer->server_uptime }}%</strong>
+                            </div>
+                            <div class="col-md-4 review-feature">
+                                <span class="">Live Status</span><br>
+                                <strong class="online">{{ $dedicatedServerOffer->live_status }}</strong>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item key-feature-sec">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button key-feature" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFeature1"
+                                            aria-expanded="true" aria-controls="collapseFeature1">
+                                            {{ $dedicatedServerOffer->list_heading }}:
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFeature1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample" style="">
+                                        <div class="accordion-body">
+
+                                            @php
+                                                $listPoints = '';
+                                                if (!empty($dedicatedServerOffer->list_point)) {
+                                                    // Remove outer <ul> and keep <li> items only
+                                                    $listPoints = strip_tags($dedicatedServerOffer->list_point, '<li>');
+                                                }
+                                            @endphp
+
+                                            <div class="hosting-key-features">
+                                                @foreach (explode('</li>', $listPoints) as $point)
+                                                    @if (!empty(trim(strip_tags($point))))
+                                                        <div class="d-flex  align-item-center">
+                                                            <i class="fa-solid fa-check feature-check-symbol"
+                                                                aria-hidden="true"></i>
+                                                            {!! $point !!}</li>
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+
+
 
         </div>
     </section>

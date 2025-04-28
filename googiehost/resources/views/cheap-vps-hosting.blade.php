@@ -89,6 +89,125 @@
         </div>
 
     </section>
+
+    {{-- vps offers section --}}
+    <section class="py-3">
+        <div class="container">
+            <div class="inner text-center block-double-tb">
+                <h2 class="large-title mb-4">Best Paid/Free VPS Hosting Plans List For 2025</h2>
+
+            </div>
+
+
+            @foreach ($data->vpsHostingOffer as $index => $vpsHostingOffer)
+                <div class="custom-review-card">
+                    <div class="d-flex justify-content-between align-items-center card-heading-sec">
+                        <h5 class="fw-bold">{{ $index + 1 }}. {{ $vpsHostingOffer->title }}</h5>
+                        <span class="fw-bold">${{ $vpsHostingOffer->price }}/mo</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <a href="{{ $vpsHostingOffer->button_link }}">
+                                    <img src="{{ asset('storage/offers/vps/' . $vpsHostingOffer->image) }}" alt="Offer"
+                                        class="img-fluid rounded"></a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <a href="{{ $vpsHostingOffer->button_link }}" class="best-deal-btn hide-btn1">Claim
+                                        deal <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div class=" stats-box">
+                                    <div class="d-flex justify-content-between"><span>Performance</span>
+                                        <strong>{{ $vpsHostingOffer->performance }}/5</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-2"><span>Speed
+                                        </span><strong>{{ $vpsHostingOffer->speed }}/5</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-2"><span>Support
+                                        </span><strong>{{ $vpsHostingOffer->support }}/5</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://googiehost.com/blog/go/youstable-dedicated/"
+                                    class="best-deal-btn hide-btn">Claim deal <i class="fa-solid fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+
+                            {!! $vpsHostingOffer->description !!}
+                        </div>
+
+                        <div class="row text-center mt-3 p-2">
+                            <div class="col-md-4 review-feature">
+                                <span class="">Response Time</span><br>
+                                <strong>{{ $vpsHostingOffer->response_time }} ms to load</strong>
+                            </div>
+                            <div class="col-md-4 review-feature">
+                                <span class="">Server Uptime</span><br>
+                                <strong>{{ $vpsHostingOffer->server_uptime }}%</strong>
+                            </div>
+                            <div class="col-md-4 review-feature">
+                                <span class="">Live Status</span><br>
+                                <strong class="online">{{ $vpsHostingOffer->live_status }}</strong>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item key-feature-sec">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button key-feature" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFeature1"
+                                            aria-expanded="true" aria-controls="collapseFeature1">
+                                            {{ $vpsHostingOffer->list_heading }}:
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFeature1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample" style="">
+                                        <div class="accordion-body">
+
+                                            @php
+                                                $listPoints = '';
+                                                if (!empty($vpsHostingOffer->list_point)) {
+                                                    // Remove outer <ul> and keep <li> items only
+                                                    $listPoints = strip_tags($vpsHostingOffer->list_point, '<li>');
+                                                }
+                                            @endphp
+
+                                            <div class="hosting-key-features">
+                                                @foreach (explode('</li>', $listPoints) as $point)
+                                                    @if (!empty(trim(strip_tags($point))))
+                                                        <div class="d-flex  align-item-center">
+                                                            <i class="fa-solid fa-check feature-check-symbol"
+                                                                aria-hidden="true"></i>
+                                                            {!! $point !!}</li>
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+
+
+        </div>
+    </section>
+
     {{-- faq section   --}}
     <div class="container mt-5 faq mb-5">
         <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>

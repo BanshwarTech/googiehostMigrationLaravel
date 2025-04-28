@@ -1064,887 +1064,95 @@
         </section>
         <!-- YouStable End -->
         <section class="review_description">
-
-            <div class="container mb-5">
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">YouStable: Rock-Solid Hosting,
-                                Unbelievable Price</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/youstable-main/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function toggleReadMore() {
-                        var content = document.getElementById("extraContent");
-                        var btn = document.getElementById("toggleButton");
-                        if (content.style.display === "none") {
-                            content.style.display = "block";
-                            btn.innerText = "Read Less";
-                        } else {
-                            content.style.display = "none";
-                            btn.innerText = "Read More";
-                        }
+            <script>
+                function toggleReadMore() {
+                    var content = document.getElementById("extraContent");
+                    var btn = document.getElementById("toggleButton");
+                    if (content.style.display === "none") {
+                        content.style.display = "block";
+                        btn.innerText = "Read Less";
+                    } else {
+                        content.style.display = "none";
+                        btn.innerText = "Read More";
                     }
-                </script>
-                <style>
-                    .btn-primary {
-                        display: none;
-                    }
+                }
+            </script>
+            <style>
+                .btn-primary {
+                    display: none;
+                }
 
+                #extraContent {
+                    display: block;
+                    /* Ensure extra content is hidden initially */
+                }
+
+                @media only screen and (max-width: 767px) {
+
+                    /* Styles for mobile devices */
                     #extraContent {
-                        display: block;
+                        display: none;
                         /* Ensure extra content is hidden initially */
                     }
 
-                    @media only screen and (max-width: 767px) {
-
-                        /* Styles for mobile devices */
-                        #extraContent {
-                            display: none;
-                            /* Ensure extra content is hidden initially */
-                        }
-
-                        .btn-primary {
-                            width: 100%;
-                            display: block;
-                        }
+                    .btn-primary {
+                        width: 100%;
+                        display: block;
                     }
-                </style>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/youstable-ban.jpg" width="100%">
-                        <p class="para mt-3"><strong> 3 Month Free with Shared/WP TriAnnual Plan</strong></p>
+                }
+            </style>
+            <div class="container mb-5">
+
+                @foreach ($data->paidHostingOffer as $paidHostingOffer)
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
+                        style="background-color: #e5d4ff">
+                        <div class="col">
+                            <div>
+                                <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">{{ $paidHostingOffer->title }}
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-center justify-content-lg-end">
+                                <a href="{{ $paidHostingOffer->button_link }}" class="text-decoration-none me-3">
+                                    <button class="activate-btn border-0">Activate Offer <i
+                                            class="fa-solid fa-arrow-right"></i></button> </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <p class="para ">From Cyber Monday Sale to NewYear jaw-dropping Offers, YouStable brings smiles
-                            to every user, who are looking for best-performing and cheap hosting services to cater the
-                            needs of the website.</p>
-                        <p class="para ">At YouStable, you can get 2 months of Free web hosting on Annual plans, Free
-                            domain for a year, Free email, Free SSL certificates for all your domain, Free website
-                            migration and cheap cost Tier 2 data center locations this Cyber Monday.
-                        </p>
+
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
+                        <div class="col">
+                            <img src="{{ asset('storage/offers/paid/' . $paidHostingOffer->image) }}" width="100%">
+                            <p class="para mt-3"><strong> {{ $paidHostingOffer->offer_text }}</strong></p>
+                        </div>
+                        <div class="col">
+                            {!! $paidHostingOffer->description !!}
 
 
-                        <!-- Additional Content Hidden Initially -->
-                        <div id="extraContent">
-                            <p class="para">Black Friday deals bring Flat 80% instant OFF on Shared Hosting plans for
-                                beginners, wanting to start Blogging, online portfolio for projects and all. Even for
-                                websites requiring virtual servers for uninterrupted management, YouStable brings 50% OFF on
-                                CyberPanel VPS Hosting deals.</p>
-                            <p class="para">Want more? Wait for Santa’s exclusive Xmas hosting gifts. And not only that,
-                                Get
-                                to Enjoy New Year's unbelievable savings. So, Stay tuned! Festive deals are on the way!</p>
-                        </div>
+                            <!-- Additional Content Hidden Initially -->
+                            {{-- <div id="extraContent">
+                                <p class="para">Black Friday deals bring Flat 80% instant OFF on Shared Hosting plans for
+                                    beginners, wanting to start Blogging, online portfolio for projects and all. Even for
+                                    websites requiring virtual servers for uninterrupted management, YouStable brings 50%
+                                    OFF on
+                                    CyberPanel VPS Hosting deals.</p>
+                                <p class="para">Want more? Wait for Santa’s exclusive Xmas hosting gifts. And not only
+                                    that,
+                                    Get
+                                    to Enjoy New Year's unbelievable savings. So, Stay tuned! Festive deals are on the way!
+                                </p>
+                            </div> --}}
 
-                        <!-- Read More Button -->
-                        <button id="toggleButton" class="btn btn-primary mt-2" onclick="toggleReadMore()">Read
-                            More</button>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Interserver- Truly Unlimited</h2>
+                            <!-- Read More Button -->
+                            {{-- <button id="toggleButton" class="btn btn-primary mt-2" onclick="toggleReadMore()">Read
+                                More</button> --}}
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/interserver/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/InterServer.png" width="100%">
-                        <p class="para mt-3"><strong> Grab VPS server for the 1 month at just $0.01 with Promo <span
-                                    style="color: #FF5722">GRABPENNY</span> </strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">We have managed to
-                            gather this information directly from the company that in 2025 Black Friday Cyber Monday
-                            Deals, you
-                            can
-                            get a VPS server for the 1 month at just $0.01. </p>
-                        <p class="para ">It offers standard and cheap and affordable web
-                            hosting
-                            for a small business.InterServer provides unlimited cloud-based hosting with unlimited
-                            storage. They
-                            deal
-                            with Affordable and reliable web hosting WordPress, VPS, Dedicated hosting at an affordable
-                            cost.
-                            Apart
-                            from that, they provide excellent customer support.</p>
-                        <p class="para ">Affordable and best is the phrase fit for
-                            InterServer
-                            hosting. It comes with 24X7 Customer Support with <a
-                                href="https://googiehost.com/blog/best-dedicated-server/" target="_blank"
-                                class="text-decoration-none" rel="noopener">Best
-                                dedicated servers</a> and almost no downtime in the past two years.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">UltaHost- Get Ultra Savings with
-                                UltaHost</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/ultahost/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/ultahost.png" width="100%">
-                        <p class="para mt-3"><strong>Fast, Reliable, Unstoppable!</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            UltaHost</a> is another service
-                            provider offering its services at really impressive rates during this Black Friday and Cyber
-                            Monday Sale
-                            in
-                            which you can grab hosting servers at just $2.90/month. But before you make your decisions
-                            let’s have a
-                            short glimpse at the quality of its services.
-                        </p>
-                        <p class="para ">
-                            It is one of the best web hosting service providers that offer both normal and <a
-                                href="https://googiehost.com/blog/best-dmca-ignored-hosting/" class="text-decoration-none"
-                                target="_blank">DMCA
-                                ignored
-                                servers</a>.
-                            Hence it actually does not matter what you are looking for because it has bundled everything
-                            for you at
-                            one
-                            single place!
-                        </p>
-                        <p class="para ">So what are you waiting for? Click on the button below and get your servers
-                            ready
-                            to
-                            use at just $2.90/month!!</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Hostinger: Host Smarter, Save
-                                Bigger</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/hostingermain/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/hostinger.jpg" width="100%">
-                        <p class="para mt-3"><strong>Upto 85% OFF + Website Builder+ Free Domain Name</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            What special does Hostinger bring this Cyber Monday? Save up to 85% on web hosting deals and
-                            get a free domain for a year on a 48-month hosting plan.
-                        </p>
-                        <p class="para ">
-                            Just @ $1.95 per month, you can get the top cloud hosting services stuffed with incredible
-                            CPU, AI assistance, RAM, bandwidth and storage as well.
-
-                        </p>
-                        <p class="para ">And what about website management? Is it easy with the Hostinger plan? Yes!
-                            Hostinger offers an amazing hPanel control panel to handle all the website related
-                            configurations with zero technicalities involved when doing so. Plus get free automatic
-                            weekly backups and snapshots for greater monitoring and data protection.
-                        </p>
-                        <p class="para ">This Black Friday, Get 67% instant OFF on VPS Hosting Sale and Enjoy golden
-                            opportunity by renting a single server and Saving Flat 70% on cloud hosting Sale</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">ScalaHosting: Scale Your Online
-                                Success</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/scalahosting-web-hosting/"
-                                class="text-decoration-none me-3"> <button class="activate-btn border-0">Activate Offer
-                                    <i class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/scalahosting.jpg" width="100%">
-                        <p class="para mt-3"><strong>Save Big on ScalaHosting Cloud VPS</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            To Scale online, you require the best nex-gen hosting infrastructure, easy server management
-                            and highest 99.9% promised Uptime. And ScalaHosting has all of that available @ 71% OFF on
-                            CyberMonday Live web hosting Sale.
-                        </p>
-                        <p class="para ">
-                            So What’s it that ScalaHosting is bringing this week? This Black Friday sale, ScalaHosting
-                            offers 78% instant OFF on web hosting sale letting you start a blogging site for just $2.66
-                            on a monthly basis.
-                        </p>
-                        <p class="para ">From Free SSL certificates for all the domains, Free 1 click plugin installer
-                            for website customization and Offsite daily backup to sPanel control panel for easy website
-                            management, SSHield Security system for blocking 99.998% of online attacks and Free domain
-                            on advanced hosting plans, ScalaHosting has everything that one needs to scale high online.
-
-                        </p>
-                        <p class="para ">Want to lay hands on Xmas & New Year deals? Stay connected here to know the
-                            updates!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Cloudways- Managed Cloud Hosting
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/cloudways/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/cloudways.jpg" width="100%">
-                        <p class="para mt-3"><strong>40% OFF For 4 Months+ 40 Free Migrations</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            But what about those who are looking for cloud services? Well, No worries!! 😇 On this Black
-                            Friday And Cyber Monday Web Hosting Sale, we have brought to you the best cloud deals in
-                            which you can get your favorite cloud server at a really meager price!!
-                        </p>
-                        <p class="para ">
-                            Cloudways is offering upto 40% discount on its most powerful cloud servers. So what are you
-                            waiting for? Click on the button mentioned below and grab the best web hosting deals at
-                            really affordable rates!!
-                        </p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">LiquidWeb: Power Meets
-                                Affordability</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/liquid-web/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/liquid-web.jpg" width="100%">
-                        <p class="para mt-3"><strong>Save up to 75% and give your business the reliable, powerful
-                                hosting it deserves.</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            Looking for a reliable web hosting deal? If it’s Shared, VPS, Cloud Server, or managed
-                            WordPress hosting, LiquidWeb has gotten you covered from all sides! And the exciting part is
-                            that just like other top providers, LiquidWeb is announcing unbeatable discounts this Black
-                            Friday and Cyber Monday.
-
-                        </p>
-                        <p class="para ">
-                            Enjoy up to 75% off on Premium web hosting, 100% guaranteed Uptime and get a free domain,
-                            thanks to the Black Friday and Cyber Monday deals. Don’t miss out on these amazing savings!
-
-                        </p>
-                        <p class="para ">
-                            Wanting to learn more about what LiquidWeb offers? Especially famous for its
-                            high-performance GPU hosting services, LiquidWeb provides multiple OS versions for greater
-                            compatibility and 24/7 non-stop customer support to help you troubleshoot the issues right
-                            away.
-
-                        </p>
-                        <p class="para ">
-                            Get amazing 70% to 75% instant OFF on various hosting plans like managed, GPU, bare metal
-                            servers and many more. Stay tuned to know more about the upcoming web hosting sales!
+                @endforeach
 
 
-                        </p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">InMotionHosting: High-Performance
-                                at Low Prices!</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/inmotionhosting/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/inmotion.jpg" width="100%">
-                        <p class="para mt-3"><strong>Enjoy 99.99% reliable service, ideal for both personal and business
-                                sites.</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            Now, let's see what InMotion Hosting got for us! This Black Friday Cyber Monday Sale, Save
-                            up to 80% OFF on web hosting deals. Unlock the Live Sale and get to enjoy premium hosting
-                            services, thanks to the best tech infrastructure of the InMotion servers.
 
-                        </p>
-                        <p class="para ">
-                            Along with attractive discounted web hosting sale, also get various other services & AddOns
-                            for free, including Free website transfer, Free domain selection, 24/7 expert support and
-                            free SSL for all the domains.
-                        </p>
-                        <p class="para ">
-                            If you are planning to start your blogging website, then this is the best time you can grab
-                            a discounted web hosting deal for just @ $1.99 and Get the best hosting services of all
-                            times.
-
-                        </p>
-                        <p class="para ">
-                            Newbies? Having issues trying InMotion Hosting services even at discounted prices? Do not
-                            worry, if you happen to dislike the services, you can get your money back in just 90 days,
-                            thanks to the anytime cancellation policy.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">DigitalOcean: $200 Free Credits
-                                Launch Your Ideas
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/digitalocean/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/digital-ocean.jpg" width="100%">
-                        <p class="para mt-3"><strong>Claim $200 on New Signup Now</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            Exclusive: Save 40% on web hosting deals of DigitalOcean! Plus, this Cyber Monday,
-                            DigitalOcean offers low-cost Droplets & Kubernetes services at Flat 40% OFF. Even get a $200
-                            credit to your hosting account where you can add web resources to meet your online needs.
-
-                        </p>
-                        <p class="para ">
-                            Along with all that mentioned above, get a free cloud firewall, free DNS management, free
-                            reserved IPs for greater server isolation and more data security. As far as VPCs are
-                            concerned, you can create as many VPCs as you want for effortless work performance and
-                            connections.
-                        </p>
-                        <p class="para ">
-                            Web Developers and App engineers out there, have the best chance to Grab & Save 40% OFF on
-                            this Black Friday web hosting sale.
-
-                        </p>
-                        <p class="para ">
-                            Wanting to get hold of more discount offers? Stay connected and we’re gonna update you on
-                            Xmas deals, NewYear offers and Easter web hosting upcoming Sale.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">VerPex: Verpex’s Biggest Sale of
-                                the Year!
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/verpex/" class="text-decoration-none me-3"> <button
-                                    class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/verpex.png" width="100%">
-                        <p class="para mt-3"><strong>Upto 90% OFF on Selected Hosting + Free Domain</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            Yes, absolutely! During this BlackFriday week, you get the best web hosting deal from
-                            Verpex. Save up to 90% OFF on hosting and launch your website now @ just @ $0.60 per month.
-                            Along with this, get Free Domain, Free daily Backup plan, non-stop tech support via
-                            LiveChat, and even 45-days money back guarantee as well.
-
-                        </p>
-                        <p class="para ">
-                            Let’s say you’re wanting to start your own hosting company and build a brand name. Then
-                            VerPex helps you by offering cheap Reseller Hosting and that too @ $1.80 per month, Saving
-                            Flat 90% this CyberMonday.
-                        </p>
-                        <p class="para ">
-                            Wait! That’s not all! You also get Instant 50% OFF on VPS hosting deals letting you cater
-                            the needs of your high traffic websites. And even get a 7 days money back guarantee on the
-                            VPS purchases if in case, the services did not match your standards.
-
-                        </p>
-
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Nexcess: Fully Managed Hosting
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/nexcess/" class="text-decoration-none me-3"> <button
-                                    class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/nexcess.png" width="100%">
-                        <p class="para mt-3"><strong>2 Month Free on Annual WP Plan</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            This Black Friday & Cyber Monday, if you’re dreaming of launching your website, then don’t
-                            make it late! Nexcess is offering Hot deals up to 75% OFF on premium managed hosting – the
-                            lowest this year.
-
-                        </p>
-                        <p class="para ">
-                            Be it WordPress, WooCommerce, or Magento, we’ve got the setup to keep your website fast,
-                            secure, and unstoppable. </p>
-                        <p class="para ">
-                            Did we mention free testing & staging apps, daily backups, and auto-scaling? Yep, Nexcess is
-                            basically one of the best web hosting providers in 2025. So, Don’t wait! This weekend on
-                            Black Friday, Save 75% OFF on web hosting sale + Get 4 months of Free hosting as well.
-
-                        </p>
-                        <p class="para ">
-                            With Nexcess, say hello to speed, security, and performance on your budget. Ready to make a
-                            move to buy a Web hosting plan this Cyber Monday? Then, Shop now watch your site slay
-                            ee testing & staging apps, daily backups, and auto-scaling? Yep, Nexcess is basically one of
-                            the best web hosting providers in 2025. So, Don’t wait! This weekend on Black Friday, Save
-                            75% OFF on web hosting sale + Get 4 months of Free hosting as well.
-
-                        </p>
-
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">A2 Hosting- Fast And Reliable
-                                Hosting</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/a2hosting/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/a2.png" width="100%">
-                        <p class="para mt-3"><strong>Free Speed Boost, Free Migration, & LOWEST Prices of the
-                                Year</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">Many web hosting companies are competing
-                            against each other for your money. Therefore, to stand out, it takes a lot of effort for a
-                            service
-                            provider
-                            to prove itself worthy. <a href="https://googiehost.com/blog/a2hosting-review/"
-                                target="_blank" class="text-decoration-none">A2Hosting</a> has been offering stunning
-                            packages, great uptime, and
-                            lovely customer
-                            service since 2001. In fact, you, as a webmaster, will most assuredly adopt and purchase its
-                            compelling
-                            WordPress plans.</p>
-                        <p class="para ">
-                            They offer plans for Shared, <a
-                                href="https://googiehost.com/blog/best-reseller-hosting-providers/"
-                                class="text-decoration-none" target="_blank">Reseller</a>, <a
-                                class="text-decoration-none" href="https://googiehost.com/blog/best-vps-hosting/"
-                                target="_blank">VPS</a>, <a class="text-decoration-none"
-                                href="https://googiehost.com/blog/best-dedicated-server/" target="_blank">Dedicated
-                                Servers</a>, and
-                            <a href="https://googiehost.com/blog/best-cloud-hosting/" class="text-decoration-none"
-                                target="_blank">Cloud Web
-                                Hosting</a>. They
-                            also
-                            offer E-Commerce tools like PrestaShop, OpenCart, AbanteCart, or other tools for building an
-                            online
-                            store.</a>
-                        </p>
-                        <p class="para ">
-                            SSH Certificate and Site Migration is today’s need, which A2Hosting Claims to
-                            offer
-                            for free! To be sure, A2 web hosting is a preferred choice. As soon as you subscribe to
-                            their plans
-                            below,
-                            you will definitely feel their presence in the area of customer support and splendid uptime!
-                        </p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Kamatera- Claim 30 Day Free Trial
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/kamatera/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/Kamatera-Web-Hosting-Sale.png" width="100%">
-                        <p class="para mt-3"><strong>Claim 1 Month Free Trial</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            Since 1995, <a href="https://googiehost.com/blog/kamatera-review/" target="_blank"
-                                class="text-decoration-none">Kamatera</a> has been one of the
-                            cutting-edge international IT-based service providers in the area of cloud computing
-                            technology. It
-                            offers
-                            advanced services supported by its skilled staff 24x7.
-                        </p>
-                        <p class="para ">
-                            Kamatera handles tonnes of clients and provides hosting on a worldwide level.
-                            This
-                            hosting company offers services in the area of <a
-                                href="https://googiehost.com/blog/best-vps-hosting/" target="_blank"
-                                class="text-decoration-none">VPS</a>, WordPress
-                            Hosting, cPanel Hosting, <a href="https://googiehost.com/blog/best-cloud-hosting/"
-                                target="_blank" class="text-decoration-none">Cloud Server</a> web panel
-                            hosting, Cloud Private Network, managed Cloud Services, and Cloud Firewall.
-                        </p>
-                        <p class="para ">For this facility, they offer servers supported by all operating systems – <a
-                                ahref="https://googiehost.com/blog/best-linux-hosting/" target="_blank"
-                                class="text-decoration-none">Linux</a>,
-                            Windows, free SSD
-                            and
-                            many more. No plan of Kamatera includes a hidden fee. For opting for Kamatera’s cloud
-                            services, you will
-                            also be provided with a <a href="https://googiehost.com/blog/go/kamaterafreetrial/"
-                                target="_blank" class="text-decoration-none">30
-                                Days
-                                Trial Subscription</a>.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Vultr- Get $50 Free Credit</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/vultr/" class="text-decoration-none me-3"> <button
-                                    class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/vultr.png" width="100%">
-                        <p class="para mt-3"><strong>Get $50 Free Credit</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            <a href="https://googiehost.com/blog/vultr-review/" target="_blank"
-                                class="text-decoration-none">Vultr</a> can be
-                            considered one of
-                            the
-                            <a href="https://googiehost.com/blog/fastest-wordpress-hosting/" target="_blank"
-                                class="text-decoration-none">fastest web
-                                hosting</a>
-                            providers that use smart cloud technology to make its web hosting service the fastest in the
-                            industry.
-                            During this Black Friday Cyber Monday hosting sale, Vultr is offering a $50 Credit with
-                            their hosting
-                            plans.
-                        </p>
-                        <p class="para ">
-                            Vultr started to offer web hosting deals from a very early stage for the upcoming Black
-                            Friday Web Hosting Sale. So, If you are planning to buy a web hosting service don’t wait for
-                            long. Click on the link to avail the best hosting offers.
-                        </p>
-                        <p class="para ">If you have further doubts you can read the full review of Vultr that will help
-                            you make an educated decision.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">BlueHost- Dream Big, Host Bigger
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/bluehostwp/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/bluehost.jpg" width="100%">
-                        <p class="para mt-3"><strong>Over 80% OFF On Websites and Online Stores</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            Established in 1996, BlueHost is the
-                            biggest
-                            name in this industry. This company specializes in WordPress Hosting with 24/7 live support.
-                        </p>
-                        <p class="para ">
-                            <a href="https://googiehost.com/blog/bluehost-reviews/" target="_blank"
-                                class="text-decoration-none">BlueHost</a>
-                            offers you an exciting upto 75% discount on this black Friday hosting sale also cyber Monday
-                            hosting
-                            sale is
-                            also included in this <a href="https://googiehost.com/web-hosting-sale-coupons.php"
-                                target="_blank" class="text-decoration-none">web
-                                hosting sale</a>.
-                        </p>
-                        <p class="para ">BlueHost offers up to a 75% discount on their Black Friday hosting sale. Cyber
-                            Monday hosting sale is also included in this web hosting sale.</p>
-                        <p class="para ">BlueHost has always been the best web hosting provider for beginners. They are
-                            one of the most reliable web hosting providers in the hosting industry.</p>
-                        <p class="para ">If you buy web hosting in BlueHost web hosting deal you can avail up to a 75%
-                            discount and start your online website immediately.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">Chemicloud- Cloud Hosting with a
-                                Spark</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/chemicloud/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/chemicloud.png" width="100%">
-                        <p class="para mt-3"><strong>Up to 82% Off Hosting + 2 Months Free</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            No matter whether you are looking for
-                            shared, <a href="https://googiehost.com/blog/best-dedicated-server/" target="_blank"
-                                class="text-decoration-none">dedicated
-                                Server</a>,
-                            VPS or WordPress hosting, you can get all that you want from Chemicloud!! And guess what? As
-                            the other
-                            web
-                            hosting providers are offering the best web hosting sales, likewise <a
-                                href="https://googiehost.com/blog/chemicloud-reviews/" target="_blank"
-                                class="text-decoration-none">Chemicloud</a> is
-                            also
-                            providing
-                            its services at a really low price.
-                        </p>
-                        <p class="para ">
-                            One more interesting aspect of it is that Chemicloud is especially popular for
-                            shared cloud servers.
-                        </p>
-                        <p class="para ">Yeah!! During this festive season, you can grab their <a
-                                href="https://googiehost.com/blog/web-hosting/" target="_blank"
-                                class="text-decoration-none">web hosting services</a>
-                            at a 65%
-                            discounted price with a free domain, all thanks to their Cyber Monday and Black Friday deals
-                            which have
-                            brought to you the best web hosting deals.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">HostArmada- Sail Through Hosting
-                                Savings</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/hostarmada/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/hostarmada.jpg" width="100%">
-                        <p class="para mt-3"><strong>80% OFF Cloud Shared and WordPress Hosting</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            <a href="https://googiehost.com/blog/hostarmada-reviews/" target="_blank"
-                                class="text-decoration-none">HostArmada</a>
-                            will be the
-                            best
-                            pick for those who are looking for low cost <a
-                                href="https://googiehost.com/blog/best-cloud-hosting/" target="_blank"
-                                class="text-decoration-none">cloud hosting</a>
-                            solutions because it offers enterprise grade cloud servers at a
-                            quite
-                            affordable price which even small business owners can afford.
-                        </p>
-                        <p class="para ">
-                            Are you looking for fast, stable and secure cloud web hosting? If yes then HostArmada will
-                            be the perfect pick for you, all thanks to its enterprise-grade cloud servers. And you know
-                            the most exciting part about HostArmada?
-                        </p>
-                        <p class="para "><strong>It has brought to you the best web hosting sale this year!! 😀</strong>
-                        </p>
-                        <p class="para ">You can avail of your favorite <a
-                                href="https://googiehost.com/blog/cloud-hosting-for-wordpress/" target="_blank"
-                                class="text-decoration-none">Cloud
-                                Shared
-                                Hosting</a>
-                            upto 80% OFF and <a href="https://googiehost.com/blog/best-vps-hosting/" target="_blank"
-                                class="text-decoration-none">VPS</a> or <a
-                                href="https://googiehost.com/blog/best-dedicated-server/" target="_blank"
-                                class="text-decoration-none">dedicated servers</a> at a
-                            30%
-                            discounted price in their Cyber Monday and Black Friday sales.</p>
-                        <p class="para ">Want something more? Well, it also provides you with 24*7 customer support!! So
-                            if you are stuck somewhere on your journey, their dedicated team of technical experts will
-                            there get you out of it.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 align-items-center"
-                    style="background-color: #e5d4ff">
-                    <div class="col">
-                        <div>
-                            <h2 class="fw-bold mb-3 mb-lg-0 text-lg-start text-center">WPX Hosting- Fastest Managed
-                                WordPress Hosting</h2>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex justify-content-center justify-content-lg-end">
-                            <a href="https://googiehost.com/blog/go/wpxhosting/" class="text-decoration-none me-3">
-                                <button class="activate-btn border-0">Activate Offer <i
-                                        class="fa-solid fa-arrow-right"></i></button> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 p-3 rounded-3 mt-3">
-                    <div class="col">
-                        <img src="https://googiehost.com/Images/wpx.png" width="100%">
-                        <p class="para mt-3"><strong>Fastest Managed WordPress Hosting</strong></p>
-                    </div>
-                    <div class="col">
-                        <p class="para ">
-                            <a href="https://googiehost.com/blog/wpx-hosting-reviews/" target="_blank"></a>WPX</a> is
-                            one of the
-                            fastest
-                            and the most valuable web hosting providers that are famous for their uncompromised customer
-                            support and
-                            lightning-fast web hosting services.
-                        </p>
-                        <p class="para ">
-                            WPX hosting offers you 3 types of hosting plans: Business, Professional, and
-                            Elite.
-                            It's totally up to you which plan suits you the most!
-                        </p>
-                        <p class="para ">WPX also has migration experts. So, if you are planning to migrate to them, then
-                            you are in luck. They offer a hassle-free website migration.</p>
-                    </div>
-                </div>
             </div>
 
 
@@ -2106,7 +1314,7 @@
 
                             <ul class="sales-tips text-left" style=" padding:20px;">
                                 <!-- <li><a href="https://googiehost.com/blog/web-hosting-buying-guide-tips" target="_blank">Web
-                                                                                                                                                                                                                                                                                                                                            Hosting Buying Guide and Tips</a></li> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            Hosting Buying Guide and Tips</a></li> -->
                                 <li><i class="fa-solid fa-check"></i><a
                                         href="https://googiehost.com/blog/best-vps-hosting" target="_blank">Best VPS
                                         Hosting

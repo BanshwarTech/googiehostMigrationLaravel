@@ -347,6 +347,32 @@
                 </ul>
             </li><!-- End Components Nav -->
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse"
+                    href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Offers</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="components-nav2" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('offer.paid') }}">
+                            <i class="bi bi-circle"></i><span>Paid Hosings Offer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('offer.vps') }}">
+                            <i class="bi bi-circle"></i><span>Vps Hosting Offer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('offer.dedicated') }}">
+                            <i class="bi bi-circle"></i><span>Dedicated Server Offer</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li><!-- End Components Nav -->
+
         </ul>
 
     </aside><!-- End Sidebar-->

@@ -55,6 +55,9 @@ class HomeController extends Controller
             },
             'paidHosting' => function ($query) {
                 $query->where('status', 'active');
+            },
+            'paidHostingOffer' => function ($query) {
+                $query->where('status', 'active');
             }
         ])->findOrFail(3);
 
@@ -75,6 +78,9 @@ class HomeController extends Controller
             },
             'vpsHosting' => function ($query) {
                 $query->where('status', 'active');
+            },
+            'vpsHostingOffer' => function ($query) {
+                $query->where('status', 'active');
             }
         ])->findOrFail(4);
 
@@ -93,6 +99,9 @@ class HomeController extends Controller
                 $query->where('status', 'active');
             },
             'dedicatedServer' => function ($query) {
+                $query->where('status', 'active');
+            },
+            'dedicatedServerOffer' => function ($query) {
                 $query->where('status', 'active');
             }
         ])->findOrFail(5);

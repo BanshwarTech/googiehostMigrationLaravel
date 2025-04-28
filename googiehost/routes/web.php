@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\DedicatedPlansController;
+use App\Http\Controllers\Admin\DedicatedServerOfferController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\paidHostingOfferController;
 use App\Http\Controllers\Admin\PaidPlansController;
 use App\Http\Controllers\Admin\ServicesController;
+use App\Http\Controllers\Admin\VpsHostingOfferController;
 use App\Http\Controllers\Admin\VpsPlansController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -70,4 +73,24 @@ Route::prefix('admin')->group(function () {
     Route::post('/dedicated-hosting-plans-store/{id?}', [DedicatedPlansController::class, 'upsertProcess'])->name('dedicated-hosting-plans.store');
     Route::get('/dedicated-hosting-plans-status/{id?}/{status}', [DedicatedPlansController::class, 'status'])->name('dedicated.status');
     Route::delete('/delete-dedicated-hosting-plans/{id?}', [DedicatedPlansController::class, 'delDediPlans'])->name('dedicated.delete');
+
+    // manage paid offer section 
+    Route::get('/offer/paid', [PaidHostingOfferController::class, 'index'])->name('offer.paid');
+    Route::get('/offer/paid/manage/', [PaidHostingOfferController::class, 'upsert'])->name('offer.paid.manage');
+    Route::post('/offer/paid/store/', [PaidHostingOfferController::class, 'store'])->name('offer.paid.store');
+    Route::get('/offer/paid/status/{id?}/{status}', [PaidHostingOfferController::class, 'status'])->name('offer.paid.status');
+    Route::delete('/offer/paid/delete/{id?}', [PaidHostingOfferController::class, 'delDediPlans'])->name('offer.paid.delete');
+
+    // manage VPS offer section
+    Route::get('/offer/vps', [VpsHostingOfferController::class, 'index'])->name('offer.vps');
+    Route::get('/offer/vps/manage/', [VpsHostingOfferController::class, 'upsert'])->name('offer.vps.manage');
+    Route::post('/offer/vps/store/', [VpsHostingOfferController::class, 'store'])->name('offer.vps.store');
+    Route::get('/offer/vps/status/{id?}/{status}', [VpsHostingOfferController::class, 'status'])->name('offer.vps.status');
+    Route::delete('/offer/vps/delete/{id?}', [VpsHostingOfferController::class, 'delete'])->name('offer.vps.delete');
+    // manage Dedicated server offer section
+    Route::get('/offer/dedicated', [DedicatedServerOfferController::class, 'index'])->name('offer.dedicated');
+    Route::get('/offer/dedicated/manage/', [DedicatedServerOfferController::class, 'upsert'])->name('offer.dedicated.manage');
+    Route::post('/offer/dedicated/store/', [DedicatedServerOfferController::class, 'store'])->name('offer.dedicated.store');
+    Route::get('/offer/dedicated/status/{id?}/{status}', [DedicatedServerOfferController::class, 'status'])->name('offer.dedicated.status');
+    Route::delete('/offer/dedicated/delete/{id?}', [DedicatedServerOfferController::class, 'delete'])->name('offer.dedicated.delete');
 });

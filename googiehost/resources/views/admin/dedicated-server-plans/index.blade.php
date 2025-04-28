@@ -2,17 +2,17 @@
 @section('content')
     <div class="pagetitle d-flex justify-content-between align-items-center">
         <div>
-            <h1>Dedicated Hosting Plans</h1>
+            <h1>Dedicated Server Plans</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Admin</a></li>
-                    <li class="breadcrumb-item active">Dedicated Hosting</li>
+                    <li class="breadcrumb-item active">Dedicated Server</li>
                 </ol>
             </nav>
         </div>
         <div>
             <a href="{{ route('manage.dedicated-hosting-plans') }}" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> Manage Dedicated Hosting Plans
+                <i class="bi bi-plus-circle"></i> Manage Dedicated Server Plans
             </a>
         </div>
     </div>
@@ -22,7 +22,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Dedicated Hosting</h5>
+                        <h5 class="card-title">Dedicated Server</h5>
 
 
                         <!-- Table with stripped rows -->
@@ -49,7 +49,7 @@
                                             <div class="dropdown mb-1">
                                                 <button class="btn btn-secondary dropdown-toggle" type="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Update Status
+                                                    {{ $paid->status == 'active' ? 'Active' : 'Inactive' }}
                                                 </button>
                                                 <ul class="dropdown-menu">
                                                     <li>
@@ -66,6 +66,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
+
                                             ||<a href="{{ route('manage.dedicated-hosting-plans', $paid->id) }}"
                                                 class="btn btn-primary"><i class="bx bxs-edit"></i> Edit</a>
                                             ||

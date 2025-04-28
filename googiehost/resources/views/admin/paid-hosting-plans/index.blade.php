@@ -49,7 +49,7 @@
                                             <div class="dropdown mb-1">
                                                 <button class="btn btn-secondary dropdown-toggle" type="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Update Status
+                                                    {{ $paid->status == 'active' ? 'Active' : 'Inactive' }}
                                                 </button>
                                                 <ul class="dropdown-menu">
                                                     <li>

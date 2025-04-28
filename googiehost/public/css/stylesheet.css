@@ -1879,6 +1879,11 @@ th:last-child {
     grid-row-gap: 0px;
 }
 
+.hosting-key-features li {
+    list-style-type: none !important;
+}
+
+
 .custom-review-card {
     border: 1px solid #e7ebff;
     border-radius: 26px;
@@ -2038,6 +2043,7 @@ th:last-child {
 .feature-check-symbol {
     color: #28006c;
     margin-right: 8px;
+    margin-top: 3px;
 }
 
 .tech-specification {

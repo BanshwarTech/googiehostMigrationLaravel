@@ -38,4 +38,16 @@ class ManagePages extends Model
     {
         return $this->hasMany(DedicatedServe::class, 'page_id');
     }
+    public function vpsHostingOffer()
+    {
+        return $this->hasMany(vpsHostingOffer::class, 'page_id');
+    }
+    public function paidHostingOffer()
+    {
+        return $this->hasMany(paidHostingOffer::class, 'page_id');
+    }
+    public function dedicatedServerOffer()
+    {
+        return $this->hasMany(dedicatedServerOffer::class, 'page_id');
+    }
 }
