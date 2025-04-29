@@ -27,21 +27,6 @@
     <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet" />
 
     <style>
-        ul.list-check li::before {
-            font-family: "Font Awesome 6 Free";
-            content: "\f00c";
-            /* fa-check */
-            color: green;
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 0px;
-            font-size: 18px;
-            /* optional to control size */
-        }
-
-
-
         .md-icon-star::before {
             content: '\e81b';
             font-family: "Font Awesome 6 Free";

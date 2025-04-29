@@ -1202,8 +1202,7 @@
                             <i class="text-center">Rajesh Chauhan, CEO, Googiehost</i>
                         </div>
                         <div class="col text-center">
-                            <img src="https://res.cloudinary.com/youstable/image/upload/v1667377846/53-01_aqdybj.png"
-                                alt="testing" class="w-50">
+                            <img src="{{ asset('images/53-01_aqdybj.png') }}" alt="testing" class="w-50">
                         </div>
                     </div><br>
 
@@ -1236,7 +1235,7 @@
                                         <td class="table-text-left">Save Flat 75% 💰</td>
                                         <td class="table-text-left">14 Jan-14 Mar, 2025</td>
                                         <td><a href="#explore-plan"><img style="width: 80px;"
-                                                    src="depends/live.webp"></a></td>
+                                                    src="{{ asset('images/icons/live.webp') }}"></a></td>
                                     </tr>
                                     <tr>
                                         <td class="table-text-left">Holi</td>
@@ -1313,8 +1312,6 @@
                                 according to your needs.</p>
 
                             <ul class="sales-tips text-left" style=" padding:20px;">
-                                <!-- <li><a href="https://googiehost.com/blog/web-hosting-buying-guide-tips" target="_blank">Web
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            Hosting Buying Guide and Tips</a></li> -->
                                 <li><i class="fa-solid fa-check"></i><a
                                         href="https://googiehost.com/blog/best-vps-hosting" target="_blank">Best VPS
                                         Hosting

@@ -192,10 +192,9 @@
             <h2 class="text-center sec-heading">Why Buy Cheap Dedicated Server Hosting?</h2>
             <p class=" text-center  p-1 sec-subheading">
                 A cheap Dedicated Hosting Must be the Best Dedicated Hosting. It has the following features.
-                MySQL database and much more.
             </p>
 
-            <div class="row g-4 mt-4">
+            <div class="row g-4 mt-3">
                 {{-- include services section --}}
                 @include('includes.services-section', ['data' => $data])
 
@@ -216,12 +215,12 @@
                     keep in mind in order to choose the best cheap Dedicated server hosting:
                 </p>
 
-                <div class="row g-4 mt-4">
+                <div class="row g-4 mt-2">
                     <!-- Feature 1 -->
                     <div class="col-md-6">
                         <div class=" feature-card">
                             <div class=" mx-auto">
-                                <img src="./assets/images/icons/cpu.svg" alt="cpu" class="mb-3">
+                                <img src="{{ asset('images/icons/cpu.svg') }}" alt="cpu" class="mb-3">
                                 <h5 class="card-title">CPU</h5>
                             </div>
                             <div class="card-body">
@@ -237,7 +236,7 @@
                     <div class="col-md-6">
                         <div class=" feature-card">
                             <div class=" mx-auto">
-                                <img src="./assets/images/icons/ram.svg" alt="ssd" class="mb-3">
+                                <img src="{{ asset('images/icons/ram.svg') }}" alt="ssd" class="mb-3">
                                 <h5 class="card-title">RAM</h5>
                             </div>
                             <div class="card-body">
@@ -253,7 +252,7 @@
                     <div class="col-md-6">
                         <div class=" feature-card">
                             <div class=" mx-auto">
-                                <img src="./assets/images/icons/ssd.svg" alt="Storage" class="mb-3">
+                                <img src="{{ asset('images/icons/ssd.svg') }}" alt="Storage" class="mb-3">
                                 <h5 class="card-title">Storage</h5>
                             </div>
                             <div class="card-body">
@@ -270,7 +269,7 @@
                     <div class="col-md-6">
                         <div class=" feature-card">
                             <div class=" mx-auto">
-                                <img src="./assets/images/icons/bandwidth.svg" alt="Bandwidth" class="mb-3">
+                                <img src="{{ asset('images/icons/bandwidth.svg') }}" alt="Bandwidth" class="mb-3">
                                 <h5 class="card-title">Bandwidth</h5>
                             </div>
                             <div class="card-body">
@@ -281,8 +280,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -290,8 +287,8 @@
 
     {{-- faq section   --}}
     <div class="container mt-5 faq mb-5">
-        <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
-        <div class="accordion p-md-5 bg-white" id="accordionExample0">
+        <h2 class="text-center mb-5 fw-bold ">Frequently Asked Questions</h2>
+        <div class="accordion bg-white" id="accordionExample0">
 
             {{-- include faq section  --}}
             @include('includes.faq-section', ['data' => $data])

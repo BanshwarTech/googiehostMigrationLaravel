@@ -317,6 +317,21 @@
                             <i class="bi bi-circle"></i><span>Faq Section</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('privacy.manage') }}">
+                            <i class="bi bi-circle"></i><span>Privacy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('terms.manage') }}">
+                            <i class="bi bi-circle"></i><span>Terms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('our.team') }}">
+                            <i class="bi bi-circle"></i><span>Our Team</span>
+                        </a>
+                    </li>
 
                 </ul>
             </li><!-- End Components Nav -->

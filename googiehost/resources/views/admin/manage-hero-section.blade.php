@@ -56,7 +56,7 @@
                             </div>
                             <div class="mb-3 col-12 col-lg-6 col-md-6">
                                 <label for="subtitle" class="form-label">Hero Subtitle</label>
-                                <textarea class="tinymce-editor" id="subtitle" name="subtitle">{{ old('subtitle', $data->subtitle ?? '<p style="font-size:20px;"></p>') }}</textarea>
+                                <textarea class="tinymce-editor" id="subtitle" name="subtitle">{{ old('subtitle', $data->subtitle ?? '<p style="font-size:16px;"></p>') }}</textarea>
                                 @error('subtitle')
                                     <div class="message">{{ $message }}</div>
                                 @enderror

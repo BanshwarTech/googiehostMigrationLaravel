@@ -1,8 +1,9 @@
-<Section class="my-5">
+<Section>
     <div class="container">
         <h4 class="cta__subheading">ACHIEVEMENTS</h4>
         <h2 class="cta_heading text-center">View our Achievements</h2>
-        <p class="cta_para text-center w-md-75 m-auto mb-5">You will get the best Free WordPress Hosting Features which
+        <p class="sec-subheading text-center w-md-75 m-auto mb-5">You will get the best Free WordPress Hosting Features
+            which
             will help you grow more and GoogieHost also helps you to migrate your Data to any Premium Hosting Provider.
         </p>
         <div class="achie-content-section text-center">

@@ -48,7 +48,7 @@
 
     </div>
     {{-- Free VPS Hosting Forever - Activate 30 Days Trial Now --}}
-    <div class="container my-5">
+    <div class="container">
         <div class="container-box p-4">
             <h2 class="text-center fw-bold">Free VPS Hosting Forever - Activate 30 Days Trial Now</h2>
             <div class="row align-items-center mt-4">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="depends/no-credit-card-new.svg" alt="VPS Hosting" class="img-fluid">
+                    <img src="{{ asset('images/no-credit-card.svg') }}" alt="VPS Hosting" class="img-fluid">
                 </div>
             </div>
             <div class="text-center mt-4">
@@ -209,9 +209,9 @@
     </section>
 
     {{-- faq section   --}}
-    <div class="container mt-5 faq mb-5">
+    <div class="container faq mb-5">
         <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
-        <div class="accordion p-md-5 bg-white" id="accordionExample0">
+        <div class="accordion bg-white" id="accordionExample0">
 
             {{-- include faq section  --}}
             @include('includes.faq-section', ['data' => $data])

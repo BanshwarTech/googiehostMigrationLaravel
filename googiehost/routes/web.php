@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DedicatedPlansController;
 use App\Http\Controllers\Admin\DedicatedServerOfferController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\OurTeamController;
 use App\Http\Controllers\Admin\paidHostingOfferController;
 use App\Http\Controllers\Admin\PaidPlansController;
 use App\Http\Controllers\Admin\ServicesController;
@@ -14,10 +15,47 @@ use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
 Route::get('/freehosting', [HomeController::class, 'freehosting'])->name('freehosting');
+
 Route::get('/web-hosting-sale-coupons', [HomeController::class, 'webHostingSaleCoupons'])->name('web.hosting.sale.coupons');
+
 Route::get('/cheap-vps-hosting', [HomeController::class, 'cheapVpsHosting'])->name('cheap.vps.hosting');
+
 Route::get('/cheap-dedicated-server', [HomeController::class, 'cheapDedicatedServer'])->name('cheap.dedicated.server');
+
+Route::get('/free-landing-page-hosting', [HomeController::class, 'freeLandingPageHosting'])->name('free.landing.page.hosting');
+
+Route::get('/free-hosting-for-ngo', [HomeController::class, 'freeHostingForNgo'])->name('free.hosting.for.ngo');
+
+Route::get('/freewordpresshosting', [HomeController::class, 'freeWordpressHosting'])->name('free.wordpress.hosting');
+
+Route::get('/free-hosting-for-student', [HomeController::class, 'freeHostingForStudent'])->name('free.hosting.for.student');
+Route::get('/freephphosting', [HomeController::class, 'freePhpHosting'])->name('free.php.hosting');
+Route::get('/freedomains', [HomeController::class, 'freeDomain'])->name('free.domain');
+Route::get('/freewebsitebuilder', [HomeController::class, 'freeWebsiteBuilder'])->name('free.website.builder');
+Route::get('/free-mysql-hosting', [HomeController::class, 'freeMysqlHosting'])->name('free.mysql.hosting');;
+
+
+
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact.us');
+
+Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
+
+Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
+
+Route::get('/disclosure', [HomeController::class, 'disclosure'])->name('disclosure');
+
+Route::get('/team', [HomeController::class, 'team'])->name('team');
+
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+Route::get('/referral', [HomeController::class, 'referral'])->name('referral');
+
+Route::get('/support', [HomeController::class, 'support'])->name('support');
+
+Route::get('/dmca-notice', [HomeController::class, 'dmcanotice'])->name('dmca-notice');
+
 
 // Admin routes
 Route::prefix('admin')->group(function () {
@@ -93,4 +131,20 @@ Route::prefix('admin')->group(function () {
     Route::post('/offer/dedicated/store/', [DedicatedServerOfferController::class, 'store'])->name('offer.dedicated.store');
     Route::get('/offer/dedicated/status/{id?}/{status}', [DedicatedServerOfferController::class, 'status'])->name('offer.dedicated.status');
     Route::delete('/offer/dedicated/delete/{id?}', [DedicatedServerOfferController::class, 'delete'])->name('offer.dedicated.delete');
+
+    // manage terms
+    Route::get('/manage-terms', [AdminController::class, 'ManageTerms'])->name('terms.manage');
+    Route::post('/manage-terms/process', [AdminController::class, 'ManageTermsProcess'])->name('terms.manage.process');
+
+    // manage privacy
+    Route::get('/manage-privacy', [AdminController::class, 'ManagePrivacy'])->name('privacy.manage');
+    Route::post('/manage-privacy/process', [AdminController::class, 'ManagePrivacyProcess'])->name('privacy.manage.process');
+
+    // manage our team
+
+    Route::get('/our-team', [OurTeamController::class, 'Index'])->name('our.team');
+    Route::get('/our-team/manage/{id?}', [OurTeamController::class, 'ManageTeam'])->name('our.team.manage');
+    Route::post('/our-team/process', [OurTeamController::class, 'ManageTeamProcess'])->name('our.team.manage.process');
+    Route::get('/our-team/status/{id?}/{status}', [OurTeamController::class, 'status'])->name('our.team.status');
+    Route::delete('/our-team/delete/{id?}', [OurTeamController::class, 'delete'])->name('our.team.delete');
 });

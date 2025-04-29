@@ -73,7 +73,7 @@ class HeroController extends Controller
 
             return redirect()->route('admin.hero-section')->with('success', $msg);
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'An error occurred while processing your request.');
+            return redirect()->back()->with('error', $e->getMessage());
         }
     }
     public function delHeroSection($id)

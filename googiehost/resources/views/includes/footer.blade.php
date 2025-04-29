@@ -1,12 +1,11 @@
-<footer class="container-fluid p-0">
+<footer class="container-fluid p-0 mt-5">
     <div class="footer p-0">
         <div class="container footer-columns">
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="widget ">
                         <h3 class="footer-title text-white">
-                            <img src="https://googiehost.com/blog/wp-content/uploads/2025/02/ghblog-logo-white-300x60.png"
-                                alt="footer-logo" width="200px">
+                            <img src="{{ asset('images/footer_logo.png') }}" alt="footer-logo" width="200px">
                         </h3>
                         <div class="textwidget">
                             <div class="list text-white ">
@@ -55,23 +54,23 @@
                                 <h3 class="footer-title text-white">Our Services</h3>
                                 <div class="textwidget">
                                     <ul class="list">
-                                        <li><a class="text-white" href="/googiehost/free-landing-page-hosting.php">
+                                        <li><a class="text-white" href="{{ route('free.landing.page.hosting') }}">
                                                 Free Landing Page Hosting</a></li>
-                                        <li><a class="text-white" href="/googiehost/free-hosting-for-ngo.php">
+                                        <li><a class="text-white" href="{{ route('free.hosting.for.ngo') }}">
                                                 Free Non-Profit Hosting</a></li>
-                                        <li><a class="text-white" href="/googiehost/freewordpresshosting.php">
+                                        <li><a class="text-white" href="{{ route('free.wordpress.hosting') }}">
                                                 Free WordPress Hosting</a></li>
-                                        <li><a class="text-white" href="/googiehost/free-hosting-for-student.php">
+                                        <li><a class="text-white" href="{{ route('free.hosting.for.student') }}">
                                                 Free Student Hosting</a></li>
-                                        <li><a class="text-white" href="/googiehost/freephphosting.php"> Free PHP8
+                                        <li><a class="text-white" href="{{ route('free.php.hosting') }}"> Free PHP
                                                 Hosting</a>
                                         </li>
-                                        <li><a class="text-white" href="/googiehost/freedomains.php"> Free Domain
+                                        <li><a class="text-white" href="{{ route('free.domain') }}"> Free Domain
                                                 Name</a>
                                         </li>
-                                        <li><a class="text-white" href="/googiehost/freewebsitebuilder.php">
+                                        <li><a class="text-white" href="{{ route('free.website.builder') }}">
                                                 Free Website Builder</a></li>
-                                        <li><a class="text-white" href="/googiehost/free-mysql-hosting.php">
+                                        <li><a class="text-white" href="{{ route('free.mysql.hosting') }}">
                                                 Free SQL Hosting</a></li>
                                         <li><a class="text-white" href="../blog/blogging"> Latest Posts</a></li>
                                     </ul>
@@ -132,7 +131,7 @@
                                 <h3 class="footer-title text-white">Free Tools</h3>
                                 <div class="textwidget">
                                     <ul class="list">
-                                        <li><a class="text-white" href="/googiehost/dmca-notice.php"> Generate DMCA
+                                        <li><a class="text-white" href="{{ route('dmca-notice') }}"> Generate DMCA
                                                 Notice</a></li>
                                         <li><a class="text-white" href="../tools/server-status-checker"> Server Status
                                                 Checker</a></li>
@@ -141,11 +140,12 @@
                                         <li><a class="text-white" href="../tools/whois-checker"> WHOIS Checker</a></li>
                                         <h3 class="footer-title text-white">Help</h3>
                                         <div class="textwidget">
-                                            <li><a class="text-white" href="/googiehost/support.php"> Knowledge
+                                            <li><a class="text-white" href="{{ route('support') }}"> Knowledge
                                                     Base</a></li>
-                                            <li><a class="text-white" href="/googiehost/referral.php"> Affiliate
+                                            <li><a class="text-white" href="#"> Affiliate
                                                     Program</a></li>
-                                            <li><a class="text-white" href="/googiehost/clientarea.php"> Client
+                                            <li><a class="text-white" target="_blank"
+                                                    href="https://client.googiehost.com/clientarea.php"> Client
                                                     Login</a></li>
                                         </div>
                                     </ul>
@@ -157,18 +157,19 @@
                                 <h3 class="footer-title text-white">Company</h3>
                                 <div class="textwidget">
                                     <ul class="list">
-                                        <li><a class="text-white" href="/googiehost/about.php"> About Us</a> </li>
-                                        <li><a class="text-white" href="/googiehost/team.php"> Our Heroes</a></li>
-                                        <li><a class="text-white" href="/googiehost/contact.php"> Contact Us</a> </li>
+                                        <li><a class="text-white" href="{{ route('about') }}"> About Us</a> </li>
+                                        <li><a class="text-white" href="{{ route('team') }}"> Our Heroes</a></li>
+                                        <li><a class="text-white" href="{{ route('contact.us') }}"> Contact Us</a>
+                                        </li>
                                         <li><a class="text-white" href="/googiehost/sitemap.xml"> Sitemap</a></li>
 
                                         <h3 class="footer-title text-white">Our Policy</h3>
                                         <div class="textwidget">
-                                            <li><a class="text-white" href="/googiehost/privacy.php"> Privacy
+                                            <li><a class="text-white" href="{{ route('privacy') }}"> Privacy
                                                     Policy</a></li>
-                                            <li><a class="text-white" href="/googiehost/terms.php"> Terms Of
+                                            <li><a class="text-white" href="{{ route('terms') }}"> Terms Of
                                                     Service</a></li>
-                                            <li><a class="text-white" href="/googiehost/disclosure.php">
+                                            <li><a class="text-white" href="{{ route('disclosure') }}">
                                                     Disclosure</a></li>
                                         </div>
                                     </ul>

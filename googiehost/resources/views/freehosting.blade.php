@@ -143,9 +143,9 @@
     @include('includes.single-features')
 
     {{-- faq section   --}}
-    <div class="container mt-5 faq mb-5">
+    <div class="container mt-5 faq">
         <h2 class="text-center mb-5 fw-bold">Free Hosting FAQ</h2>
-        <div class="accordion p-md-5 bg-white" id="accordionExample0">
+        <div class="accordion  bg-white" id="accordionExample0">
 
             {{-- include faq section  --}}
             @include('includes.faq-section', ['data' => $data])

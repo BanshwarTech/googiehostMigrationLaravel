@@ -37,7 +37,7 @@
         </div>
         <div class="inner container " style="padding-top: 0 !important;">
             <img loading="lazy" alt="featured on logos" class="img-fluid"
-                src="{{ asset('images/featured-logos2.png') }}">
+                src="{{ asset('images/featured-logos.png') }}">
         </div>
     </div>
 @endforeach
