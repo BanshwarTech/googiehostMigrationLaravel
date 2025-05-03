@@ -1,6 +1,8 @@
 @extends('includes.layout')
-@section('page_title', 'Index')
 @section('content')
+    @php
+        $pageName = 'index'; // Define page name for this view
+    @endphp
     <style>
         .hero-section .hero-image-section img {
             margin: auto;

@@ -23,6 +23,7 @@ class PaidHostingOfferController extends Controller
     {
         $result['pages'] = ManagePages::all();
         $result['data'] = $id ? paidHostingOffer::findOrFail($id) : null;
+        dd($result);
         return view('admin.paid-hosting-offers.manage-offer', $result);
     }
 

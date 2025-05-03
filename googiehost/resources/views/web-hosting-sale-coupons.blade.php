@@ -1,7 +1,8 @@
 @extends('includes.layout')
-@section('page_title', 'Website Hosting Sale Coupons - GoogieHost')
 @section('content')
-
+    @php
+        $pageName = 'web-hosting-sale-coupons'; // Define page name for this view
+    @endphp
     <style type="text/css">
         body,
         html {

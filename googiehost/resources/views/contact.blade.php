@@ -1,7 +1,9 @@
 @extends('includes.layout')
 @section('page_title', 'Contact ')
 @section('content')
-
+    @php
+        $pageName = 'contact';
+    @endphp
     <div class="hero-section">
         <div class="container py-5">
             <div class="row text-center">

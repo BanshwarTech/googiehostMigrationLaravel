@@ -22,4 +22,12 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    #Redirection to old pages
+RewriteRule ^https://googiehost.com/web-hosting-sale.html https://googiehost.com/web-hosting-sale-coupons.html [L,R=301,L]
+RewriteRule ^https://googiehost.com/dedicated-servers.html https://googiehost.com/cheap-dedicated-server.html [L,R=301]
+RewriteRule ^https://googiehost.com/premiumhosting.html https://www.a2hosting.com?aid=5dcbe3286f686&bid=945ee523
+RewriteRule ^best-hosting-for-wordpress.html https://googiehost.com/freewordpresshosting.html [L,R=301]
+RewriteRule ^web-hosting-sale-&-coupons.html https://googiehost.com/web-hosting-sale-coupons.html [R=301, L]
+RewriteRule ^seo.html https://googiehost.com/ [L,R=301]
 </IfModule>

@@ -1,3 +1,16 @@
+@php
+    $meta = config("meta.$pageName", [
+        'title' => 'Default Title',
+        'description' => 'Default description.',
+        'keywords' => 'default, keywords',
+        'schema' => '',
+    ]);
+
+@endphp
+{{-- <pre>{{ var_dump(config("meta.$pageName")) }}</pre> --}}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +18,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title></title>
+    <title>{{ $meta['title'] }}</title>
+    <meta name="description" content="{{ $meta['description'] }}">
+    <meta name="keywords" content="{{ $meta['keywords'] }}">
+    {{-- Render schema if it exists --}}
+    @if (!empty($meta['schema']))
+        {!! $meta['schema'] !!}
+    @endif
     <!-- Favicons -->
     <link href="{{ asset('images/favicon.png') }}" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">

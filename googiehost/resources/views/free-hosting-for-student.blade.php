@@ -2,6 +2,10 @@
 @section('page_title', 'Index')
 @section('content')
 
+    @php
+        $pageName = 'free-hosting-for-student'; // Define page name for this view
+    @endphp
+
     {{-- hero section --}}
     @include('includes.hero-section', ['data' => $data])
 

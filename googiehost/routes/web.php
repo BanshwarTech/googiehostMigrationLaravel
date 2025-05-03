@@ -114,7 +114,7 @@ Route::prefix('admin')->group(function () {
 
     // manage paid offer section 
     Route::get('/offer/paid', [PaidHostingOfferController::class, 'index'])->name('offer.paid');
-    Route::get('/offer/paid/manage/', [PaidHostingOfferController::class, 'upsert'])->name('offer.paid.manage');
+    Route::get('/offer/paid/manage/{id?}', [PaidHostingOfferController::class, 'upsert'])->name('offer.paid.manage');
     Route::post('/offer/paid/store/', [PaidHostingOfferController::class, 'store'])->name('offer.paid.store');
     Route::get('/offer/paid/status/{id?}/{status}', [PaidHostingOfferController::class, 'status'])->name('offer.paid.status');
     Route::delete('/offer/paid/delete/{id?}', [PaidHostingOfferController::class, 'delDediPlans'])->name('offer.paid.delete');

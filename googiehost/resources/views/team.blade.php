@@ -1,7 +1,8 @@
 @extends('includes.layout')
-@section('page_title', 'Teams')
 @section('content')
-
+    @php
+        $pageName = 'team'; // Define page name for this view
+    @endphp
 
     <div class="hero-section">
         <div class="container py-5">

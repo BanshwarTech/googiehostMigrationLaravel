@@ -1,7 +1,8 @@
 @extends('includes.layout')
-@section('page_title', 'Support')
 @section('content')
-
+    @php
+        $pageName = 'support'; // Define page name for this view
+    @endphp
     <!-- KNOWLEDGE BASE -->
     <div class="knowledge">
         <h1 class="text-center fw-bold mt-5">KNOWLEDGE BASE</h1>

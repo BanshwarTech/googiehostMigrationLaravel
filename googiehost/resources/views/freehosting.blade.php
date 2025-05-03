@@ -1,6 +1,8 @@
 @extends('includes.layout')
-@section('page_title', 'Free Hosting - GoogieHost')
 @section('content')
+    @php
+        $pageName = 'freehosting'; // Define page name for this view
+    @endphp
     <style>
         .hero-section .hero-image-section img {
             margin: auto;
@@ -13,7 +15,8 @@
     {{-- plan section --}}
     <div class="container pricing-section py-5">
         <h2 class="sec-heading text-center">Choose Your Web Hosting Plan</h2>
-        <p class="sec-subheading text-center">GoogieHost offers best free hosting with added features to help you reach new
+        <p class="sec-subheading text-center pb-5">GoogieHost offers best free hosting with added features to help you reach
+            new
             heights. Get free website migration when switching to a premium hosting provider.</p>
         {{-- include hosting plan  --}}
         @include('includes.hosting-plans')
@@ -153,5 +156,4 @@
 
         </div>
     </div>
-
 @endsection

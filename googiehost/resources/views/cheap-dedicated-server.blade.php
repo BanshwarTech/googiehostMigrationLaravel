@@ -1,6 +1,9 @@
 @extends('includes.layout')
 @section('page_title', 'Cheap Dedicated Server')
 @section('content')
+    @php
+        $pageName = 'cheap-dedicated-server';
+    @endphp
     {{-- hero section --}}
     @include('includes.hero-section', ['data' => $data])
 

@@ -1,6 +1,9 @@
 @extends('includes.layout')
-@section('page_title', 'Index')
 @section('content')
+    @php
+        $pageName = 'freedomains'; // Define page name for this view
+    @endphp
+
 
     {{-- hero section --}}
     <style>
@@ -213,10 +216,47 @@
         </div>
     </div>
 
+    {{-- banner section --}}
+    <section class="pb-5">
+        <div class="container">
+            <div class="content-upgrade mb-mid block-single box-lr " style="background-color: #F9F5FF;  color: #FFFFFF;">
+
+                <div class="content-upgrade-text mb-single ">
+                    <p class="banner__heading">Free Forever Plan >> Get Started For Free</p>
+                    <p class="banner__content mb-4">Register A Website For Free & Get Results from Many Engines at Once.
+                        Web, Images & Video, Information, Wiki, News & More. Trusted by Millions.</p>
+                    <a href="signup" class="btn banner__btn "
+                        rel="me">{{ strtoupper('Activate Free Domain') }}</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    {{-- feature section  --}}
+    <section>
+        <div class="container pb-5 ">
+            <h2 class="text-center sec-heading">Here's what you will get for free →</h2>
+            <p class=" text-center  p-1 sec-subheading">
+                You’ll not only get a free domain and hosting but also other free vital features to build a robust and
+                attractive website.
+            </p>
+
+            <div class="row g-4 mt-4">
+                {{-- include services section --}}
+                @include('includes.services-section', ['data' => $data])
+
+            </div>
+        </div>
+
+    </section>
+
+    {{-- comparison table --}}
     <div class="container my-5 comparison-table">
-        <h2 class="text-center ">How do we measure up to our competition?</h2>
-        <div class="table-responsive  p-3">
-            <table class="table table-bordered text-center  hosting-comparison-table">
+        <h2 class="text-center w-md-50 m-auto">Why GoogieHost Is The Best Free Hosting Provider Over The Internet</h2>
+
+        <div class="table-responsive  py-3">
+            <table class="table table-bordered text-center hosting-comparison-table">
                 <thead>
                     <tr class="table-freeHosting-section">
                         <th></th>
@@ -226,7 +266,7 @@
                         <th></th>
                     </tr>
                     <tr class="table-heading-section">
-                        <th></th>
+                        <th>Features</th>
                         <th class="googiehost-table-heading">GoogieHost</th>
                         <th class="table-heading-sec">InfinityFree</th>
                         <th class="table-heading-sec">Weebly</th>
@@ -234,82 +274,84 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Free Subdomain</td>
-                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                    <tr class="table-active">
+                        <td class="text-start">Free Subdomain</td>
+                        <td class="googiehost-table-col">
+                            <i class="fa-solid fa-check check compare-table-check"></i>
+                        </td>
+                        <td><i class="fa-solid fa-check check compare-table-check"></i></td>
+                        <td><i class="fa-solid fa-check check compare-table-check"></i></td>
+                        <td><i class="fa-solid fa-check check compare-table-check"></i></td>
                     </tr>
                     <tr>
-                        <td>Website/User</td>
-                        <td>1</td>
+                        <td class="text-start">Website/User</td>
+                        <td class="googiehost-table-col1">1</td>
                         <td>1</td>
                         <td>1</td>
                         <td>1</td>
                     </tr>
-                    <tr>
-                        <td>Disk Space</td>
-                        <td>1000 MB SSD</td>
+                    <tr class="table-active">
+                        <td class="text-start">Disk Space</td>
+                        <td class="googiehost-table-col">1000 MB SSD</td>
                         <td>Unlimited but HDD</td>
                         <td>500 MB SSD</td>
                         <td>500 MB SSD</td>
                     </tr>
                     <tr>
-                        <td>Banwidth</td>
-                        <td>100 GB</td>
+                        <td class="text-start">Banwidth</td>
+                        <td class="googiehost-table-col1">100 GB</td>
                         <td>Unlimited</td>
                         <td>100 MB</td>
                         <td>500 MB</td>
                     </tr>
-                    <tr>
-                        <td>Business Email</td>
-                        <td>2</td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                    <tr class="table-active">
+                        <td class="text-start">Business Email</td>
+                        <td class="googiehost-table-col">2</td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
                     </tr>
                     <tr>
-                        <td>SSL Certificates</td>
+                        <td class="text-start">SSL Certificates</td>
+                        <td class="googiehost-table-col1"><i class="fa-solid fa-check check compare-table-check"></i></td>
                         <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td class="text-start">CloudFlare</td>
+                        <td class="googiehost-table-col"><i class="fa-solid fa-check check compare-table-check"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
                     </tr>
                     <tr>
-                        <td>CloudFlare</td>
+                        <td class="text-start">cPanel</td>
+                        <td class="googiehost-table-col1"><i class="fa-solid fa-check check compare-table-check"></i></td>
                         <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td class="text-start">Cloud Linux</td>
+                        <td class="googiehost-table-col"><i class="fa-solid fa-check check compare-table-check"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
+                        <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
                     </tr>
                     <tr>
-                        <td>cPanel</td>
+                        <td class="text-start">Website Builder</td>
+                        <td class="googiehost-table-col1"><i class="fa-solid fa-check check compare-table-check"></i></td>
                         <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td><i class="fa-solid fa-check check compare-table-check"></i></td>
+                        <td><i class="fa-solid fa-check check compare-table-check"></i></td>
                     </tr>
-                    <tr>
-                        <td>Cloud Linux</td>
+                    <tr class="table-active">
+                        <td class="text-start">No Ads</td>
+                        <td class="googiehost-table-col"><i class="fa-solid fa-check check compare-table-check"></i></td>
                         <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Website Builder</td>
                         <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                    </tr>
-                    <tr>
-                        <td>No Ads</td>
                         <td><i class="fa-solid fa-minus compare-table-minus"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
-                        <td><i class="fa-solid fa-xmark cross"></i></td>
                     </tr>
                 </tbody>
             </table>

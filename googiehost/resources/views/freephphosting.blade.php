@@ -1,6 +1,9 @@
 @extends('includes.layout')
-@section('page_title', 'Index')
 @section('content')
+    @php
+        $pageName = 'freephphosting'; // Define page name for this view
+    @endphp
+
     {{-- hero section --}}
     @include('includes.hero-section', ['data' => $data])
 
@@ -47,6 +50,7 @@
         @include('includes.hosting-plans')
     </div>
 
+    {{-- Grow Without Resistance --}}
     <div class="container mb-5">
         <h2 class="sec-heading text-center">Grow Without Resistance →</h2>
         <p class="sec-subheading text-center mb-5">It's time for you to grow without limits with FREE WordPress Hosting</p>
@@ -56,7 +60,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                            <img src="{{ asset('images/wordpress-icons/infinite.png') }}" class="w-50 mb-3">
+                            <img src="{{ asset('images/wordpress-icons/infinite.png') }}" class="mb-3" width="100">
                             <h5 class="fw-bold">Supports MySQL 8.0</h5>
                         </div>
                         <div class="flip-card-back d-flex align-items-center justify-content-center p-4">
@@ -73,7 +77,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                            <img src="{{ asset('images/wordpress-icons/unlimited.png') }}" class="w-50 mb-3">
+                            <img src="{{ asset('images/wordpress-icons/unlimited.png') }}" class=" mb-3" width="100">
                             <h5 class="fw-bold">PHP Version: 8, 7, 6, 5.6</h5>
                         </div>
                         <div class="flip-card-back d-flex align-items-center justify-content-center p-4">
@@ -90,7 +94,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                            <img src="{{ asset('images/wordpress-icons/turn.png') }}" class="w-50 mb-3">
+                            <img src="{{ asset('images/wordpress-icons/turn.png') }}" class="mb-3" width="100">
                             <h5 class="fw-bold">Cloudflare CDN</h5>
                         </div>
                         <div class="flip-card-back d-flex align-items-center justify-content-center p-4">
@@ -107,7 +111,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front d-flex flex-column align-items-center justify-content-center">
-                            <img src="{{ asset('images/wordpress-icons/rank.png') }}" class="w-50 mb-3">
+                            <img src="{{ asset('images/wordpress-icons/rank.png') }}" class="mb-3" width="100">
                             <h5 class="fw-bold">Immense Hosting Experience</h5>
                         </div>
                         <div class="flip-card-back d-flex align-items-center justify-content-center p-4">

@@ -1,7 +1,8 @@
 @extends('includes.layout')
-@section('page_title', 'Dmca Notice')
 @section('content')
-
+    @php
+        $pageName = 'dmca-notice'; // Define page name for this view
+    @endphp
     <div class="hero-section">
         <div class="container py-5">
             <div class="row text-center">
